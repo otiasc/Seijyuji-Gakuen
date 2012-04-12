@@ -1,3 +1,4 @@
+var dicePrefix = 'GOB';
 var actions = new Array();
 //cantidad de dados
 /*

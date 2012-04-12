@@ -1,10 +1,6 @@
-// JavaScript Document
 function hey() {
 	alert($(parent.document).find('#text_editor_textarea').attr('value'));
 }
-
-var dicePrefix = 'GOB';
-var actions = new Array();
 
 var param = new Array(0,0,0,0);
 var attr = new Array('Rango', 'Fuerza', 'Velocidad', 'Inteligencia');
