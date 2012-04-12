@@ -40,7 +40,7 @@ function loadPage() {
 	// EJ currentPage = 'Atacar/Tamer'
 	var i = 0;
 	
-	// Última cosa de la lista (solo para comprobar que no se repiten
+	// Última cosa de la lista (solo para comprobar que no se repiten)
 	var lastAction = '';
 	$('#actionList').html('');
 	while(i<actionsIndex.length) {
@@ -76,12 +76,21 @@ function loadPage() {
 				newLi.appendTo('#actionList');
 				lastAction = t;
 			}
-			
 		}
 		i++;
 	}
+	var j=0;
+	$('#plusList').html('');
+	$('#result').css('display','none');
+	while (j<actions.length) {
+		if (actions[j].name==currentPage.slice(0,-1)) {
+			loadAction(j);
+		}
+		j++;
+	}
 }
-function loadAction(index) {
+function loadAction(actionId) {
+	$('#result').css('display','block');
 	$('#actionId').attr('value', actionId);
 	var extras = actions[actionId].bonus;
 	var i = 0;
@@ -210,6 +219,7 @@ function calculate() {
 	
 	var t = $(parent.document).find('#text_editor_textarea').attr('value');
 	$(parent.document).find('#text_editor_textarea').attr('value', t + copyString);
+	nextPage('');
 }
 $(document).ready(function(e) {
 	loadPage();
