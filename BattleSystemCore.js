@@ -5,7 +5,83 @@ function hey() {
 var param = new Array(0,0,0,0);
 var attr = new Array('Rango', 'Fuerza', 'Velocidad', 'Inteligencia');
 var ranks = new Array('Exwire', '2ª Baja', '1ª Baja', '2ª Media', '1ª Media', '2ª Alta', '1ª Alta', 'Honor', 'Arc', 'Paladin');
-function page2(actionId) {
+var currentPage = '';
+function nextPage(action) {
+	// Sistema para cambiar de página
+	currentPage = action;
+	// Next pages
+	loadPage();
+}
+function loadPage() {
+	// Cargar la barra superior
+	var cpa = currentPage.split('/');
+	$('#navBar').html('');
+	
+	var newLi2 = $('<li></li>');
+	
+	var newA2 = $('<a />', {
+		href: 'javascript:void(0)',	text: 'Índice',	onclick: 'nextPage(\"\")'
+	}).appendTo(newLi2);
+	
+	newLi2.appendTo('#navBar');
+	
+	var previous = '';
+	for (var j=0; j<cpa.length-1; j++) {
+		previous += cpa[j] + '/'
+		var newLi = $('<li></li>');
+		var newA = $('<a />', {
+			href: 'javascript:void(0)',	text: cpa[j], onclick: 'nextPage(\"' + previous +  '\")'
+		}).appendTo(newLi);
+		
+		// Poner en la lista
+		newLi.appendTo('#navBar');
+	}
+	// Cargar todo lo que sea currentPage
+	// EJ currentPage = 'Atacar/Tamer'
+	var i = 0;
+	
+	// Última cosa de la lista (solo para comprobar que no se repiten
+	var lastAction = '';
+	$('#actionList').html('');
+	while(i<actionsIndex.length) {
+
+		// Posición en la que se encuentra
+		var posicion = actionsIndex[i].indexOf(currentPage);
+		// EJ índice de 'Atacar/Tamer/'
+		
+		if (posicion==0) {
+			// Disponible para avanzar en subcategoría
+			
+			// Texto de la siguiente acción
+			var t = actionsIndex[i].slice(currentPage.length);
+			// EJ 'Invocación/Invocar familiar'
+			
+			// Si el texto tiene barras, quedarnos solo con lo primero
+			if (t.indexOf('/')!=-1) {t = t.slice(0, t.indexOf('/'))}
+			// EJ 'Invocación'
+			
+			// Si la acción es la primera vez que se realiza, adelante
+			if (t!=lastAction) {
+				// EJ 'Invocacion' != ''
+				
+				// Preparar elemento de menú
+				var newLi = $('<li></li>');
+				var newA = $('<a />', {
+					href: 'javascript:void(0)',
+					text: t,
+					onclick: 'nextPage(\"' + currentPage + t + '/' +  '\")'
+				}).appendTo(newLi);
+				
+				// Poner en la lista
+				newLi.appendTo('#actionList');
+				lastAction = t;
+			}
+			
+		}
+		i++;
+	}
+}
+function loadAction(index) {
 	$('#actionId').attr('value', actionId);
 	var extras = actions[actionId].bonus;
 	var i = 0;
@@ -136,18 +212,5 @@ function calculate() {
 	$(parent.document).find('#text_editor_textarea').attr('value', t + copyString);
 }
 $(document).ready(function(e) {
-	var i=0;
-	$('#actionList').html('');
-
-    while (i<actions.length) {
-		var newLi = $('<li></li>');
-		var newA = $('<a />', {
-			href: 'javascript:void(0)',
-			text: actions[i].name,
-			onclick: 'page2(' + i + ')'
-		}).appendTo(newLi);
-		newLi.appendTo('#actionList');
-		i++;
-	}
-	
+	loadPage();
 });
