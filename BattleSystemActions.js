@@ -35,3 +35,4 @@ actions.push({prefix: 'ESCAP', equation:'1 + V*2', name: 'Huir/A un lugar lejano
 	'-1 o -2: El exorcista ha tropezado',
 	'-3 o menos: El exorcista ha tropezado y se le han caído las llaves'
 )});
+$.getScript('BattleSystemActions_Atacar');
