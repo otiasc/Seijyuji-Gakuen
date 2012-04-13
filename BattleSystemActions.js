@@ -1,17 +1,9 @@
 var dicePrefix = 'GOB';
 var actionsIndex = new Array(
-	'Atacar/Arma blanca',
-	'Atacar/Arma de fuego',
-	'Atacar/Arma demoniaca',
-	'Atacar/K\'rik',
-	'Atacar/Tamer/Invocación/Invocar familiar',
-	'Atacar/Tamer/Invocación/Atacar con familiar',
-	'Atacar/Versos',
-	'Curación/Herida espiritual (Masho)',
-	'Curación/Herida no espiritual',
-	'Esconderse',
-	'Interponerse',
-	'Huir/A un lugar lejano (fuera del tema)'
+	'Atacar/Cuerpo a cuerpo/Puñetazo',
+	'Atacar/Cuerpo a cuerpoPatada',
+	'Atacar/Arma blanca/De una mano (daga, etc.)',
+	'Atacar/Arma blanca/De dos manos (espada, etc.)'
 );
 var actions = new Array();
 //cantidad de dados
