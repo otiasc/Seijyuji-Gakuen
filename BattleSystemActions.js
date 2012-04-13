@@ -38,6 +38,7 @@ var actions = new Array();
 	F = fuerza
 	I = inteligencia
 	V = velocidad
+	D = Determinación
 	
 	Obligatorio separar por sumas
 	1 + R*2 + -V*2

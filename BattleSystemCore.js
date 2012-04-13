@@ -126,11 +126,12 @@ function calculate() {
 	var base = actions[actionId].equation.split('+');
 	
 	// Por cada base
-	var R, V, F, I
-	R = 3;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
-	V = 3;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
-	F = 2;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
-	I = 1;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
+	var R, V, F, I, D;
+	R = 0;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
+	V = parseInt($('#iframeContent').contents().find('#profile_field_10_3').attr('value'));
+	F = parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
+	I = parseInt($('#iframeContent').contents().find('#profile_field_10_2').attr('value'));
+	D = parseInt($('#iframeContent').contents().find('#profile_field_10_4').attr('value'));
 	
 	var i = 0;
 	var points = 0;
