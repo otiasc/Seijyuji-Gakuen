@@ -16,7 +16,7 @@
 /*
 	CATEGORÍA Aria
 */
-actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Corto', bonus:new Array(
+actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Corto', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Distracciones'
@@ -26,7 +26,7 @@ actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Corto', bonu
 	'Cuando se completa, el enemigo recibe daño leve por todo el cuerpo'
 )});
 
-actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Medio', bonus:new Array(
+actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Medio', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Distracciones'
@@ -36,7 +36,7 @@ actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Medio', bonu
 	'Recibe daño grave por todo el cuerpo'
 )});
 
-actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
+actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Distracciones'
