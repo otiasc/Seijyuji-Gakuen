@@ -84,8 +84,8 @@ var actionsIndex = new Array(
 	'Otras/Pedir refuerzos',
 	'Otras/Buscar objeto en suelo',
 	'Otras/Recuperar arma',
-	'Acciones obligadas/Buscar las llaves',
-	'Acciones obligadas/Levantarse del suelo'
+	'Acciones obligatorias/Buscar las llaves',
+	'Acciones obligatorias/Levantarse del suelo'
 );
 var actions = new Array();
 //cantidad de dados
