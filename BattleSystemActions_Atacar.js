@@ -26,7 +26,8 @@
 	CATEGORÍA Atacar/Cuerpo a cuerpo
 */
 
-actions.push({prefix:'0002', equation:'F', name:'Atacar/Cuerpo a cuerpo/Puñetazo', bonus:new Array(
+//  DADO 01
+actions.push({prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cuerpo/Puñetazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -39,7 +40,7 @@ actions.push({prefix:'0002', equation:'F', name:'Atacar/Cuerpo a cuerpo/Puñetaz
 	'-4 o menos: Ataque fallido. Golpeas en mal sitio. [u]Herida grave (lesión) en la mano[/u]'
 )});
 
-actions.push({prefix:'0002', equation:'F', name:'Atacar/Cuerpo a cuerpo/Patada', bonus:new Array(
+actions.push({prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cuerpo/Patada', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -58,7 +59,7 @@ actions.push({prefix:'0002', equation:'F', name:'Atacar/Cuerpo a cuerpo/Patada',
 	CATEGORÍA Atacar/Arma blanca
 */
 
-actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma blanca/De una mano (daga, etc.)', bonus:new Array(
+actions.push({prefix:'ARM', equation:'F', name:'Atacar/Arma blanca/De una mano (daga, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -72,7 +73,7 @@ actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma blanca/De una mano 
 	'-6: Ataque fallido. Te hieres a ti mismo en la pierna. [u]Herida grave en pierna[/u]'
 )});
 
-actions.push({prefix:'0002', equation:'F-1', name:'Atacar/Arma blanca/De dos manos (espada, etc.)', bonus:new Array(
+actions.push({prefix:'ARM', equation:'F-1', name:'Atacar/Arma blanca/De dos manos (espada, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -90,7 +91,7 @@ actions.push({prefix:'0002', equation:'F-1', name:'Atacar/Arma blanca/De dos man
 	CATEGORÍA Atacar/Arma cuerpo a cuerpo
 */
 
-actions.push({prefix:'0002', equation:'F-2', name:'Atacar/Arma cuerpo a cuerpo/Contundente (martillo, porra, etc.)', bonus:new Array(
+actions.push({prefix:'ACC', equation:'F-2', name:'Atacar/Arma cuerpo a cuerpo/Contundente (martillo, porra, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -103,7 +104,7 @@ actions.push({prefix:'0002', equation:'F-2', name:'Atacar/Arma cuerpo a cuerpo/C
 	'-4 o menos: Ataque fallido. Hieres al compañero más cercano. [u]Herida leve[/u]',
 	'-5: Ataque fallido. Hieres al compañero más cercano. [u]Herida grave[/u]'
 )});
-actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Golpear', bonus:new Array(
+actions.push({prefix:'AC2', equation:'F', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Golpear', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -114,7 +115,7 @@ actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma cuerpo a cuerpo/No 
 	'0 a -3: Ataque fallido.',
 	'-4 o menos: Ataque fallido. Hieres al compañero más cercano. [u]Herida leve[/u]'
 )});
-actions.push({prefix:'0002', equation:'F-1', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Lanzar a distancia', bonus:new Array(
+actions.push({prefix:'ACC', equation:'F-1', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Lanzar a distancia', bonus:new Array(
 	'-1|El enemigo está lejos',
 	'-2|El enemigo está muy lejos',
 	'-3|El enemigo no se ve',
@@ -134,7 +135,7 @@ actions.push({prefix:'0002', equation:'F-1', name:'Atacar/Arma cuerpo a cuerpo/N
 	CATEGORÍA Atacar/Arma de fuego
 */
 
-actions.push({prefix:'0002', equation:'F-1', name:'Atacar/Arma de fuego/Automática (ametralladora, etc.)', bonus:new Array(
+actions.push({prefix:'ARM', equation:'F-1', name:'Atacar/Arma de fuego/Automática (ametralladora, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -145,7 +146,7 @@ actions.push({prefix:'0002', equation:'F-1', name:'Atacar/Arma de fuego/Automát
 	'0 a -3: Ataque fallido.',
 	'-4 o menos: Ataque fallido. Hieres al compañero más cercano. [u]Herida grave[/u]'
 )});
-actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma de fuego/Manual (pistola, escopeta, etc.)', bonus:new Array(
+actions.push({prefix:'ARM', equation:'F', name:'Atacar/Arma de fuego/Manual (pistola, escopeta, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -160,7 +161,7 @@ actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma de fuego/Manual (pi
 /*
 	CATEGORÍA: Atacar/Arma demoniaca
 */
-actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma demoniaca/Espada demoniaca', bonus:new Array(
+actions.push({prefix:'ARM', equation:'F', name:'Atacar/Arma demoniaca/Espada demoniaca', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Herida en mano',
@@ -177,7 +178,7 @@ actions.push({prefix:'0002', equation:'F', name:'Atacar/Arma demoniaca/Espada de
 /*
 	CATEGORÍA: Atacar/Etc
 */
-actions.push({prefix:'0002', equation:'F+1', name:'Atacar/Etc/Lanzar objeto', bonus:new Array(
+actions.push({prefix:'ACC', equation:'F+1', name:'Atacar/Etc/Lanzar objeto', bonus:new Array(
 	'+1|Objeto ligero',
 	'-1|Objeto pesado',
 	'-1|El objetivo está lejos',

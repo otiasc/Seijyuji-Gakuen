@@ -16,7 +16,7 @@
 /*
 	CATEGORÍA Aria
 */
-actions.push({prefix:'0002', equation:'I', name:'Aria/Versos fatales/Corto', bonus:new Array(
+actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Corto', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Distracciones'
@@ -26,7 +26,7 @@ actions.push({prefix:'0002', equation:'I', name:'Aria/Versos fatales/Corto', bon
 	'Cuando se completa, el enemigo recibe daño leve por todo el cuerpo'
 )});
 
-actions.push({prefix:'0002', equation:'I', name:'Aria/Versos fatales/Medio', bonus:new Array(
+actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Medio', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Distracciones'
@@ -36,7 +36,7 @@ actions.push({prefix:'0002', equation:'I', name:'Aria/Versos fatales/Medio', bon
 	'Recibe daño grave por todo el cuerpo'
 )});
 
-actions.push({prefix:'0002', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
+actions.push({prefix:'ARI', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-1|Distracciones'
@@ -49,7 +49,7 @@ actions.push({prefix:'0002', equation:'I', name:'Aria/Versos fatales/Largo', bon
 /*
 	CATEGORÍA Doctor
 */
-actions.push({prefix:'0002', equation:'I+R', name:'Doctor/Curar', bonus:new Array(
+actions.push({prefix:'DOC', equation:'I+R', name:'Doctor/Curar', bonus:new Array(
 	'+1|Herida leve',
 	'-1|Herida grave',
 	'-2|Herida muy grave'
@@ -65,13 +65,13 @@ actions.push({prefix:'0002', equation:'I+R', name:'Doctor/Curar', bonus:new Arra
 /*
 	CATEGORÍA Tamer
 */
-actions.push({prefix:'0002', equation:'D', name:'Tamer/Invocación de familiar', bonus:new Array(
+actions.push({prefix:'TA1', equation:'D', name:'Tamer/Invocación de familiar', bonus:new Array(
 	'-1|Lugar difícil de escribir'
 ), results: new Array(
 	'+1 o más:Invocación conseguida',
 	'0 o menos: Falla la invocación'
 )});
-actions.push({prefix:'0002', equation:'D', name:'Tamer/Ataque de familiar', bonus:new Array(
+actions.push({prefix:'TA2', equation:'D', name:'Tamer/Ataque de familiar', bonus:new Array(
 	'+1|Herida leve',
 	'-1|Herida grave',
 	'-2|Herida muy grave'
@@ -83,7 +83,7 @@ actions.push({prefix:'0002', equation:'D', name:'Tamer/Ataque de familiar', bonu
 	'-5: El familiar se vuelve contra ti. [u]Herida leve[/u]',
 	'-6 o menos: El familiar se vuelve contra ti. [u]Herida grave[/u]'
 )});
-actions.push({prefix:'0002', equation:'D', name:'Tamer/Habilidad especial de familiar', bonus:new Array(
+actions.push({prefix:'TA2', equation:'D', name:'Tamer/Habilidad especial de familiar', bonus:new Array(
 	'+1|Herida leve',
 	'-1|Herida grave',
 	'-2|Herida muy grave'
@@ -95,7 +95,7 @@ actions.push({prefix:'0002', equation:'D', name:'Tamer/Habilidad especial de fam
 	'-5: El familiar se vuelve contra ti. [u]Herida leve[/u]',
 	'-6 o menos: El familiar se vuelve contra ti. [u]Herida grave[/u]'
 )});
-actions.push({prefix:'0002', equation:'D', name:'Tamer/Recuperar control de familiar', bonus:new Array(
+actions.push({prefix:'B10', equation:'D', name:'Tamer/Recuperar control de familiar', bonus:new Array(
 	'-1|Lugar difícil de escribir'
 ), results: new Array(
 	'+1 o más:Invocación conseguida',
