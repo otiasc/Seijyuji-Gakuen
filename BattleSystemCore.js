@@ -132,6 +132,7 @@ function calculate() {
 	F = parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
 	I = parseInt($('#iframeContent').contents().find('#profile_field_10_2').attr('value'));
 	D = parseInt($('#iframeContent').contents().find('#profile_field_10_4').attr('value'));
+	alert ('F' + F + '\nI' + I + '\nV' + V + '\nD' + D);
 	
 	var i = 0;
 	var points = 0;
