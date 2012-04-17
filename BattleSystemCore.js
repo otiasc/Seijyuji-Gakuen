@@ -43,18 +43,16 @@ function loadPage() {
 	// Última cosa de la lista (solo para comprobar que no se repiten)
 	var lastAction = '';
 	$('#actionList').html('');
-	while(i<actionsIndex.length) {
 	while(i<actions.length) {
 
 		// Posición en la que se encuentra
-		var posicion = actionsIndex[i].indexOf(currentPage);
+		var posicion = actionsIndex[i].name.indexOf(currentPage);
 		// EJ índice de 'Atacar/Tamer/'
 		
 		if (posicion==0) {
 			// Disponible para avanzar en subcategoría
 			
 			// Texto de la siguiente acción
-			var t = actionsIndex[i].slice(currentPage.length);
 			var t = actionsIndex[i].name.slice(currentPage.length);
 			// EJ 'Invocación/Invocar familiar'
 			
@@ -141,7 +139,6 @@ function calculate() {
 	ESG = 0;
 	MEM = 0;
 	FAM = 0;
-	alert ('F' + F + '\nI' + I + '\nV' + V + '\nD' + D);
 	
 	var i = 0;
 	var points = 0;
@@ -208,8 +205,6 @@ function calculate() {
 	alertString += conditionsString + '\n';
 	alertString += '\nDados extra: ' + extraDices + '\n';
 	alertString += conditions2String;
-	
-	alert(alertString);
 	
 	copyString = '\n[hr]';
 	copyString+= '[spoiler=' + actionString + ', Extra: ' + extraDices + ']';
