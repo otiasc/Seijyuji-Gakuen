@@ -84,18 +84,23 @@ var actionsIndex = new Array(
 	'Otras/Pedir refuerzos',
 	'Otras/Buscar objeto en suelo',
 	'Otras/Recuperar arma',
-	'Acciones obligatorias/Buscar las llaves',
-	'Acciones obligatorias/Levantarse del suelo'
+	'Otras/Buscar las llaves',
+	'Otras/Levantarse del suelo'
 );
 var actions = new Array();
 //cantidad de dados
 /*
 	Cómo hacer una ecuación
-	R = rango
 	F = fuerza
 	I = inteligencia
 	V = velocidad
-	D = Determinación
+	D = Fuerza de voluntad
+	
+	DOC = Medicina (solo Doctor)
+	MEM = Memoria (solo Aria)
+	PUN = Puntería (solo Dragoon)
+	ESG = Habilidad con la espada (solo Knight)
+	FAM = Fuerza máxima del familiar (solo Tamer)
 	
 	Obligatorio separar por sumas
 	1 + R*2 + -V*2

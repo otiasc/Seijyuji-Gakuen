@@ -39,17 +39,13 @@ actions.push({prefix:'B11', equation:'1', name:'Otras/Recuperar arma', bonus:new
 	'+1 o más: recuperado',
 	'0 o menos: no recuperado'
 )});
-
-/*
-	CATEGORÍA Acciones obligatorias
-*/
-actions.push({prefix:'B11', equation:'1', name:'Acciones obligatorias/Buscar las llaves', bonus:new Array(
+actions.push({prefix:'B11', equation:'1', name:'Otras/Buscar las llaves', bonus:new Array(
 	'-1|Es de noche'
 ), results: new Array(
 	'+1 o más: Encontradas',
 	'0 o menos: No encontradas'
 )});
-actions.push({prefix:'B21', equation:'1', name:'Acciones obligatorias/Levantarse del suelo', bonus:new Array(
+actions.push({prefix:'B21', equation:'1', name:'Otras/Levantarse del suelo', bonus:new Array(
 	'-1|Tiene heridas graves',
 	'-2|Tiene heridas muy graves'
 ), results: new Array(

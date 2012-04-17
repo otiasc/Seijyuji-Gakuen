@@ -132,6 +132,13 @@ function calculate() {
 	F = parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
 	I = parseInt($('#iframeContent').contents().find('#profile_field_10_2').attr('value'));
 	D = parseInt($('#iframeContent').contents().find('#profile_field_10_4').attr('value'));
+	
+	var PUN, DOC, ESG, FAM
+	PUN = 0;
+	DOC = 0;
+	ESG = 0;
+	MEM = 0;
+	FAM = 0;
 	alert ('F' + F + '\nI' + I + '\nV' + V + '\nD' + D);
 	
 	var i = 0;
@@ -155,6 +162,11 @@ function calculate() {
 				if (base[i].indexOf('V')!=-1) {conditionsString += ' por velocidad,'}
 				if (base[i].indexOf('I')!=-1) {conditionsString += ' por inteligencia,'}
 				if (base[i].indexOf('R')!=-1) {conditionsString += ' por rango (' + ranks[R] + '),'}
+				//
+				if (base[i].indexOf('PUN')!=-1) {conditionsString += ' por puntería,'}
+				if (base[i].indexOf('DOC')!=-1) {conditionsString += ' por medicina,'}
+				if (base[i].indexOf('ESG')!=-1) {conditionsString += ' por habil. con la espada,'}
+				if (base[i].indexOf('FAM')!=-1) {conditionsString += ' por fuerza de familiar,'}
 				conditionsString = conditionsString.slice(0,-1);
 				conditionsString += '\n';
 			}
@@ -164,7 +176,7 @@ function calculate() {
 		}
 		i++;
 	}
-	actionString = 'Acción: ' + actions[actionId].name + ' (' + points + ')';
+	actionString = 'Acción: ' + actions[actionId].name + ' ( ' + points + ' )';
 	
 	// Parámetros
 	
@@ -176,8 +188,8 @@ function calculate() {
 	var extraDices = 0;
 	$('#plusList input[type=checkbox]').each(function(index, element) {
 		if ($(this).attr('checked')) {
-			conditions2String += '-' + $(this).parent('label').text() + ' (' + $(this).attr('value') + ')' + '\n'
-			extraDices += parseInt( $(this).attr('value'), 10);
+			conditions2String += '-' + $(this).parent('label').text() + ' ( ' + $(this).attr('value') + ' )' + '\n'
+			extraDices += parseInt( eval( $(this).attr('value') ), 10);
 		}
     });
 	
@@ -198,7 +210,7 @@ function calculate() {
 	alert(alertString);
 	
 	copyString = '\n[hr]';
-	copyString+= '[spoiler=Tirada: ' + actionString + ', Extra: ' + extraDices + ']';
+	copyString+= '[spoiler=' + actionString + ', Extra: ' + extraDices + ']';
 	copyString+= 'Base: ' + basePoints + '\n';
 	copyString+= conditionsString + '\n';
 	

@@ -19,17 +19,17 @@
 actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Corto', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
-	'-1|Distracciones'
+	'-I/2|Distracciones'
 ), results: new Array(
 	'Requiere un total de +10 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
-	'Si se saca -4 en una tirada se interrumpen los versos fatales',
+	'Si se saca -1 o menos en una misma tirada se interrumpen los versos fatales',
 	'Cuando se completa, el enemigo recibe daño leve por todo el cuerpo'
 )});
 
 actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Medio', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
-	'-1|Distracciones'
+	'-I/2|Distracciones'
 ), results: new Array(
 	'Requiere un total de +15 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
 	'Si se saca -4 en una tirada se interrumpen los versos fatales y hay que empezar',
@@ -39,7 +39,7 @@ actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Medio', bonu
 actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
-	'-1|Distracciones'
+	'-I/2|Distracciones'
 ), results: new Array(
 	'Requiere un total de +30 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
 	'Si se saca -4 en una tirada se interrumpen los versos fatales',
@@ -49,55 +49,53 @@ actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Largo', bonu
 /*
 	CATEGORÍA Doctor
 */
-actions.push({prefix:'DOC', equation:'I+R', name:'Doctor/Curar', bonus:new Array(
-	'+1|Herida leve',
-	'-1|Herida grave',
-	'-2|Herida muy grave'
+actions.push({prefix:'DOC', equation:'DOC', name:'Doctor/Curar', bonus:new Array(
+	'+I|Se quiere curar herida leve',
+	'-DOC/3|Se quiere curar herida grave',
+	'-DOC/2|Se quiere curar herida muy grave'
 ), results: new Array(
-	'+3: Cura 2 partes del cuerpo dañado',
-	'+1 o +2: Cura 1 parte del cuerpo dañado',
+	'+1 o más: Cura la parte dañada',
 	'0: Falla la curación',
-	'-2 o -3: Hieres al cuerpo dañado. [u]La herida se agrava (si es leve pasa a grave, si es grave pasa a muy grave)[/u]',
-	'-4 o -5: Hieres al cuerpo dañado. [u]La herida pasa a muy grave[/u]',
-	'-6 o menos: Una parte sana se daña. [u]Herida grave[/u]'
+	'-1: Hieres al cuerpo dañado. [u]La herida se agrava (si es leve pasa a grave, si es grave pasa a muy grave)[/u]',
+	'-2: Hieres al cuerpo dañado. [u]La herida pasa a muy grave (si ya estaba en muy grave, se daña una parte sana)[/u]',
+	'-3 o menos: Una parte sana se daña. [u]Herida grave[/u]'
 )});
 
 /*
 	CATEGORÍA Tamer
 */
 actions.push({prefix:'TA1', equation:'D', name:'Tamer/Invocación de familiar', bonus:new Array(
-	'-1|Lugar difícil de escribir'
 ), results: new Array(
 	'+1 o más:Invocación conseguida',
 	'0 o menos: Falla la invocación'
 )});
-actions.push({prefix:'TA2', equation:'D', name:'Tamer/Ataque de familiar', bonus:new Array(
-	'+1|Herida leve',
-	'-1|Herida grave',
-	'-2|Herida muy grave'
+actions.push({prefix:'TA2', equation:'D+FAM', name:'Tamer/Ataque de familiar', bonus:new Array(
+	'-1|El exorcista (tú) duda (fuerza de voluntad baja)',
+	//
+	'+1|El objetivo es causar herida leve',
+	'-D/3|El objetivo es causar herida grave',
+	'-D/2|El objetivo es causar herida muy grave'
 ), results: new Array(
-	'+3 o más: Ataque conseguido. [u]Daño dependiendo del ataque en zona crítica[/u]',
-	'+1 o +2: Ataque conseguido. [u]Daño dependiendo del ataque[/u]',
-	'0 a -2: Ataque fallido',
-	'-3 o -4: Baja tu determinación. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]',
-	'-5: El familiar se vuelve contra ti. [u]Herida leve[/u]',
-	'-6 o menos: El familiar se vuelve contra ti. [u]Herida grave[/u]'
+	'+1 o más: Ataque conseguido. [u]Daño dependiendo del ataque[/u]',
+	'0: Ataque fallido',
+	'-1 a -3: Tu familiar se descontrola. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]',
+	'-4: El familiar se vuelve contra ti. [u]Te provoca una herida leve[/u]',
+	'-5 o menos: El familiar se vuelve contra ti. [u]Te provoca una herida grave[/u]'
 )});
-actions.push({prefix:'TA2', equation:'D', name:'Tamer/Habilidad especial de familiar', bonus:new Array(
-	'+1|Herida leve',
-	'-1|Herida grave',
-	'-2|Herida muy grave'
+actions.push({prefix:'TA2', equation:'D+FAM*DOC', name:'Tamer/Curación', bonus:new Array(
+	'+1|Se quiere curar herida leve',
+	'-FAM*DOC/4|Se quiere curar herida grave',
+	'-FAM*DOC/3|Se quiere curar herida muy grave'
 ), results: new Array(
 	'+3 o más: Habilidad realizada con mucho éxito',
 	'+1 o +2: Habilidad realizada con éxito',
-	'0 a -2: Ataque fallido',
-	'-3 o -4: Baja tu determinación. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]',
-	'-5: El familiar se vuelve contra ti. [u]Herida leve[/u]',
-	'-6 o menos: El familiar se vuelve contra ti. [u]Herida grave[/u]'
+	'0: Ataque fallido',
+	'-1 o -2: Baja tu determinación. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]',
+	'-3: El familiar no te hace caso. Hieres el cuerpo dañado [u]Herida leve[/u]. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]',
+	'-4 o menos: El familiar se vuelve contra ti. Te ataca [u]Herida grave[/u]. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]'
 )});
 actions.push({prefix:'B10', equation:'D', name:'Tamer/Recuperar control de familiar', bonus:new Array(
-	'-1|Lugar difícil de escribir'
 ), results: new Array(
-	'+1 o más:Invocación conseguida',
-	'0 o menos: Falla la invocación'
+	'+1 o más: Control recuperado',
+	'0 o menos: Control no recuperado'
 )});
