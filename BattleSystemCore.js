@@ -46,14 +46,14 @@ function loadPage() {
 	while(i<actions.length) {
 
 		// Posición en la que se encuentra
-		var posicion = actionsIndex[i].name.indexOf(currentPage);
+		var posicion = actions[i].name.indexOf(currentPage);
 		// EJ índice de 'Atacar/Tamer/'
 		
 		if (posicion==0) {
 			// Disponible para avanzar en subcategoría
 			
 			// Texto de la siguiente acción
-			var t = actionsIndex[i].name.slice(currentPage.length);
+			var t = actions[i].name.slice(currentPage.length);
 			// EJ 'Invocación/Invocar familiar'
 			
 			// Si el texto tiene barras, quedarnos solo con lo primero
