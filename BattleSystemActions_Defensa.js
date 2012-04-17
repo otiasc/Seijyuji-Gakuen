@@ -16,6 +16,7 @@
 	CATEGORÍA Atacar/Cuerpo a cuerpo
 */
 actions.push({prefix:'B11', equation:'10', name:'Defensa propia/Alejarse', bonus:new Array(
+actions.push({prefix:'B11', equation:'V', name:'Defensa propia/Alejarse', bonus:new Array(
 ), results: new Array(
 	'+1 o más: Consigues alejarte',
 	'0 a -6: No consigues alejarte lo suficiente',
@@ -41,12 +42,14 @@ actions.push({prefix:'B10', equation:'V', name:'Defender a otro/Interponerse', b
 	'-7 o menos: Caes sobre la otra persona. Ambos recibís el ataque'
 )});
 actions.push({prefix:'B11', equation:'10', name:'Defender a otro/Distraer', bonus:new Array(
+actions.push({prefix:'B11', equation:'I', name:'Defender a otro/Distraer', bonus:new Array(
 ), results: new Array(
 	'+7 o más: Distracción conseguida. El demonio se va a otra parte',
 	'0 a +6: El demonio no se distrae',
 	'-1: El demonio no se distrae y te localiza'
 )});
 actions.push({prefix:'B21', equation:'10', name:'Defender a otro/Llamar la atención sobre uno mismo', bonus:new Array(
+actions.push({prefix:'B21', equation:'I', name:'Defender a otro/Llamar la atención sobre uno mismo', bonus:new Array(
 ), results: new Array(
 	'+3 o más: Distracción conseguida. El demonio va a por ti',
 	'-6 a +2: El demonio no se distrae',

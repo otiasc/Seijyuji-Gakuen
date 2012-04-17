@@ -44,6 +44,7 @@ function loadPage() {
 	var lastAction = '';
 	$('#actionList').html('');
 	while(i<actionsIndex.length) {
+	while(i<actions.length) {
 
 		// Posición en la que se encuentra
 		var posicion = actionsIndex[i].indexOf(currentPage);
@@ -54,6 +55,7 @@ function loadPage() {
 			
 			// Texto de la siguiente acción
 			var t = actionsIndex[i].slice(currentPage.length);
+			var t = actionsIndex[i].name.slice(currentPage.length);
 			// EJ 'Invocación/Invocar familiar'
 			
 			// Si el texto tiene barras, quedarnos solo con lo primero

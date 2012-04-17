@@ -34,6 +34,7 @@ actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Medio', bonu
 	'Requiere un total de +15 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
 	'Si se saca -4 en una tirada se interrumpen los versos fatales y hay que empezar',
 	'Recibe daño grave por todo el cuerpo'
+	'Cuando se completa, el enemigo recibe daño grave por todo el cuerpo'
 )});
 
 actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
@@ -44,6 +45,7 @@ actions.push({prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Largo', bonu
 	'Requiere un total de +30 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
 	'Si se saca -4 en una tirada se interrumpen los versos fatales',
 	'Recibe daño grave por todo el cuerpo'
+	'Cuando se completa, el enemigo recibe daño muy grave por todo el cuerpo'
 )});
 
 /*
