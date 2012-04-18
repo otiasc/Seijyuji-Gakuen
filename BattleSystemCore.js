@@ -133,6 +133,9 @@ function calculate() {
 	I = parseInt($('#iframeContent').contents().find('#profile_field_10_2').attr('value'));
 	D = parseInt($('#iframeContent').contents().find('#profile_field_10_4').attr('value'));
 	
+	var FD; // Fuerza demoniaca
+	FD = 0;
+	
 	var PUN, DOC, ESG, FAM
 	PUN = 0;
 	DOC = 0;
