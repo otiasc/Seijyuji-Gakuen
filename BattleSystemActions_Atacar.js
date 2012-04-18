@@ -65,6 +65,38 @@ actions.push({uniqueId:'A3', prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cu
 	'-3 o menos: Ataque fallido. Desequilibras y caes al suelo'
 )});
 
+actions.push({uniqueId:'A13', prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cuerpo/Cabezazo', bonus:new Array(
+	'+1|El enemigo no te ve (ataque por sorpresa)',
+	//
+	'-F/4|El exorcista (tú) tiene herida leve la cabeza',
+	'-F/3|El exorcista (tú) tiene herida grave (lesión) en la cabeza'
+), results: new Array(
+	'+3 o más: Ataque con éxito. Herida leve al enemigo',
+	'+1 o +2: Ataque con éxito. Herida leve a ambos jugadores',
+	'0: Ataque fallido. Te haces una herida leve en la cabeza',
+	'-1 o menos: Ataque fallido. Te haces una herida leve en la cabeza y te caes al suelo'
+)});
+actions.push({uniqueId:'A14', prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cuerpo/Agarrar del cuello', bonus:new Array(
+	'+1|El enemigo no te ve (ataque por sorpresa)',
+	//
+	'-F/4|El exorcista (tú) tiene herida leve la cabeza',
+	'-F/3|El exorcista (tú) tiene herida grave (lesión) en la cabeza'
+), results: new Array(
+	'+3 o más: Ataque con éxito. Herida leve al enemigo',
+	'+1 o +2: Ataque con éxito. Herida leve a ambos jugadores',
+	'0: Ataque fallido. Te haces una herida leve en la cabeza',
+	'-1 o menos: Ataque fallido. Te haces una herida leve en la cabeza y te caes al suelo'
+)});
+actions.push({uniqueId:'A15', prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cuerpo/Codazo o rodillazo', bonus:new Array(
+	'+1|El enemigo no te ve (ataque por sorpresa)',
+	//
+	'-F/2|El exorcista (tú) tiene herida leve en el codo o rodilla',
+	'-F*2/3|El exorcista (tú) tiene herida grave (lesión) en el codo o rodilla'
+), results: new Array(
+	'+1 o más: Ataque con éxito. Herida leve',
+	'0: Ataque fallido',
+	'-1 o menos: Ataque fallido. Te haces una herida leve en el codo o rodilla'
+)});
 
 /*
 	CATEGORÍA Atacar/Arma blanca
