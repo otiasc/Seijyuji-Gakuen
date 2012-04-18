@@ -32,6 +32,11 @@ actions.push({prefix:'B11', equation:'F', name:'Defensa propia/Soltarte del enem
 	'+1 o más: Consigues alejarte',
 	'0: No consigues alejarte lo suficiente',
 	'-1 o menos: Tropiezas y caes al suelo'
+actions.push({uniqueId:'D4', prefix:'B11', equation:'F', name:'Defensa propia/Soltarte del enemigo', bonus:new Array(
+), results: new Array(
+	'+1 o más: Consigues soltarte',
+	'0: No consigues soltarte',
+	'-1 o menos: Al forcejear te dañas. [u]Herida leve[/u]'
 )});
 actions.push({prefix:'B10', equation:'V', name:'Defender a otro/Interponerse', bonus:new Array(
 ), results: new Array(
