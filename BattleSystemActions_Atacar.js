@@ -64,7 +64,6 @@ actions.push({uniqueId:'A3', prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cu
 	'-1 a -2: Ataque fallido. Retrocedes tú',
 	'-3 o menos: Ataque fallido. Desequilibras y caes al suelo'
 )});
-
 actions.push({uniqueId:'A13', prefix:'CC', equation:'F', name:'Atacar/Cuerpo a cuerpo/Cabezazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
