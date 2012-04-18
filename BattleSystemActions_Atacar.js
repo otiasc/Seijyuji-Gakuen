@@ -221,6 +221,19 @@ actions.push({uniqueId:'A11', prefix:'ARM', equation:'1+ESG', name:'Atacar/Arma 
 	'-4: Ataque fallido. Hieres al compañero más cercano. [u]Herida muy grave[/u]',
 	'-5: se rompe'
 )});
+actions.push({uniqueId:'A16', prefix:'ACC', equation:'FD * D', name:'Atacar/Etc/Llamas demoníacas', bonus:new Array(
+	'-F*D/4|El enemigo está lejos',
+	'-F*D/3|El enemigo está muy lejos',
+	'-F*D|El enemigo no se ve'
+), results: new Array(
+	'+3 o más: Provocas quemaduras graves en el objetivo. Herida grave',
+	'+1 o +2: Fuego en el enemigo. Herida leve',
+	'0: Ataque fallido. Provocas una llama cerca de ti',
+	'-1: Ataque fallido. Provocas un incendio a tu alrededor',
+	'-2 o -3 Ataque fallido. Quemas a un compañero',
+	'-4 a -6: Ataque fallido. Quemas a un compañero y pierdes el control de ti mismo',
+	'-7 o menos: Provocas una Noche Azul. Consecuencias desconocidas'
+)});
 
 /*
 	CATEGORÍA: Atacar/Etc
