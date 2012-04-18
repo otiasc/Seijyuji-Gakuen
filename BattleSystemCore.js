@@ -175,7 +175,7 @@ function calculate() {
 		}
 		i++;
 	}
-	actionString = 'Acción: ' + actions[actionId].name + ' ( ' + points + ' )';
+	actionString = 'Acción: ' + actions[actionId].name + ' ( ' + actions[actionId].uniqueId + ' )';
 	
 	// Parámetros
 	
@@ -207,6 +207,8 @@ function calculate() {
 	alertString += conditions2String;
 	
 	copyString = '\n[hr]';
+	copyString+= actionString;
+	/*
 	copyString+= '[spoiler=' + actionString + ', Extra: ' + extraDices + ']';
 	copyString+= 'Base: ' + basePoints + '\n';
 	copyString+= conditionsString + '\n';
@@ -215,6 +217,7 @@ function calculate() {
 	copyString+= conditions2String;
 	copyString+= '[/spoiler]';
 	copyString+='';
+	*/
 	
 	copyString+='[roll=\"' + dicePrefix + actions[actionId].prefix + '\"]' + points + '[/roll]';
 	
