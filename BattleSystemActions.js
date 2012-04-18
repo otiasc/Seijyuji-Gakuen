@@ -24,6 +24,7 @@
 	
 */
 var dicePrefix = '00GEN';
+var dicePrefix = '00GENERIC';
 var actions = new Array();
 //cantidad de dados
 /*
