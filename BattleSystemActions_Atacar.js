@@ -222,9 +222,7 @@ actions.push({uniqueId:'A11', prefix:'ARM', equation:'1+ESG', name:'Atacar/Arma 
 	'-5: se rompe'
 )});
 actions.push({uniqueId:'A16', prefix:'ACC', equation:'FD * D', name:'Atacar/Etc/Llamas demoníacas', bonus:new Array(
-	'-F*D/4|El enemigo está lejos',
-	'-F*D/3|El enemigo está muy lejos',
-	'-F*D|El enemigo no se ve'
+	'-F*D/4|Escuchas la llamada de Gehena'
 ), results: new Array(
 	'+3 o más: Provocas quemaduras graves en el objetivo. Herida grave',
 	'+1 o +2: Fuego en el enemigo. Herida leve',
