@@ -137,11 +137,11 @@ function calculate() {
 	FD = 0;
 	
 	var PUN, DOC, ESG, FAM
-	PUN = 0;
-	DOC = 0;
-	ESG = 0;
-	MEM = 0;
-	FAM = 0;
+	PUN = parseInt($('#iframeContent').contents().find('#profile_field_10_5').attr('value'));
+	DOC = parseInt($('#iframeContent').contents().find('#profile_field_10_7').attr('value'));
+	ESG = parseInt($('#iframeContent').contents().find('#profile_field_10_6').attr('value'));
+	MEM = parseInt($('#iframeContent').contents().find('#profile_field_10_9').attr('value'));
+	FAM = parseInt($('#iframeContent').contents().find('#profile_field_10_8').attr('value'));
 	
 	var i = 0;
 	var points = 0;
