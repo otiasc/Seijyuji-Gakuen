@@ -16,7 +16,7 @@
 /*
 	CATEGORÍA Aria
 */
-actions.push({uniqueId:'H1', prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Corto', bonus:new Array(
+actions.push({uniqueId:'H1', prefix:'7', equation:'I', name:'Aria/Versos fatales/Corto', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-I/2|Distracciones'
@@ -26,7 +26,7 @@ actions.push({uniqueId:'H1', prefix:'ARM', equation:'I', name:'Aria/Versos fatal
 	'Cuando se completa, el enemigo recibe daño leve por todo el cuerpo'
 )});
 
-actions.push({uniqueId:'H2', prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Medio', bonus:new Array(
+actions.push({uniqueId:'H2', prefix:'7', equation:'I', name:'Aria/Versos fatales/Medio', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-I/2|Distracciones'
@@ -36,7 +36,7 @@ actions.push({uniqueId:'H2', prefix:'ARM', equation:'I', name:'Aria/Versos fatal
 	'Cuando se completa, el enemigo recibe daño grave por todo el cuerpo'
 )});
 
-actions.push({uniqueId:'H3', prefix:'ARM', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
+actions.push({uniqueId:'H3', prefix:'7', equation:'I', name:'Aria/Versos fatales/Largo', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
 	'-I/2|Distracciones'
@@ -49,7 +49,7 @@ actions.push({uniqueId:'H3', prefix:'ARM', equation:'I', name:'Aria/Versos fatal
 /*
 	CATEGORÍA Doctor
 */
-actions.push({uniqueId:'H4', prefix:'DOC', equation:'DOC', name:'Doctor/Curar', bonus:new Array(
+actions.push({uniqueId:'H4', prefix:'6', equation:'DOC', name:'Doctor/Curar', bonus:new Array(
 	'+I|Se quiere curar herida leve',
 	'-DOC/3|Se quiere curar herida grave',
 	'-DOC/2|Se quiere curar herida muy grave'
@@ -64,12 +64,12 @@ actions.push({uniqueId:'H4', prefix:'DOC', equation:'DOC', name:'Doctor/Curar', 
 /*
 	CATEGORÍA Tamer
 */
-actions.push({uniqueId:'H5', prefix:'TA1', equation:'D*FAM', name:'Tamer/Invocación de familiar', bonus:new Array(
+actions.push({uniqueId:'H5', prefix:'6', equation:'D*FAM', name:'Tamer/Invocación de familiar', bonus:new Array(
 ), results: new Array(
 	'+1 o más:Invocación conseguida',
 	'0 o menos: Falla la invocación'
 )});
-actions.push({uniqueId:'H6', prefix:'TA2', equation:'D+FAM', name:'Tamer/Ataque de familiar', bonus:new Array(
+actions.push({uniqueId:'H6', prefix:'7', equation:'D+FAM', name:'Tamer/Ataque de familiar', bonus:new Array(
 	'-1|El exorcista (tú) duda (fuerza de voluntad baja)',
 	//
 	'+1|El objetivo es causar herida leve',
@@ -82,7 +82,7 @@ actions.push({uniqueId:'H6', prefix:'TA2', equation:'D+FAM', name:'Tamer/Ataque 
 	'-4: El familiar se vuelve contra ti. [u]Te provoca una herida leve[/u]',
 	'-5 o menos: El familiar se vuelve contra ti. [u]Te provoca una herida grave[/u]'
 )});
-actions.push({uniqueId:'H7', prefix:'TA2', equation:'D+FAM*DOC', name:'Tamer/Curación', bonus:new Array(
+actions.push({uniqueId:'H7', prefix:'6', equation:'D+FAM*DOC', name:'Tamer/Curación', bonus:new Array(
 	'+1|Se quiere curar herida leve',
 	'-FAM*DOC/4|Se quiere curar herida grave',
 	'-FAM*DOC/3|Se quiere curar herida muy grave'
@@ -94,7 +94,7 @@ actions.push({uniqueId:'H7', prefix:'TA2', equation:'D+FAM*DOC', name:'Tamer/Cur
 	'-3: El familiar no te hace caso. Hieres el cuerpo dañado [u]Herida leve[/u]. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]',
 	'-4 o menos: El familiar se vuelve contra ti. Te ataca [u]Herida grave[/u]. Debes realizar una tirada de [u]Tamer/Recuperar control de familiar[/u]'
 )});
-actions.push({uniqueId:'H8', prefix:'B10', equation:'D', name:'Tamer/Recuperar control de familiar', bonus:new Array(
+actions.push({uniqueId:'H8', prefix:'6', equation:'D', name:'Tamer/Recuperar control de familiar', bonus:new Array(
 ), results: new Array(
 	'+1 o más: Control recuperado',
 	'0 o menos: Control no recuperado'

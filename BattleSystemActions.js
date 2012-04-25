@@ -3,27 +3,21 @@
 	PREFIJO DE DADO
 	PARA ASTAROTH
 	
-	01AST
+	02BEEL
 	
 	ID	CARAS	-1	O	+1
 	--------------------------------------------
-	CC	10		0	9	1	90%, sin pifias
-	ARM	10		1	4	5	50%, con posible pifia simple. Arma de uso general
-	ACC	10		1	5	4	60%, con posible pifia simple. Arma débil
-	AC2	10		1	8	1	90%, con posible pifia simple. Arma muy débil
-	ARI	10		1	4	5	50%, con posible pifia simple. Arias > versos fatales
-	DOC	10		3	3	4	50%, con posibilidad alta de fallo. Doctor
-	TA1	10		0	2	8	20%, sin pifias. Tamer > invocar
-	TA2	10		2	3	5	50%, con posible pifia doble > hacer algo con el familiar
+	6	10		1	5	4
+	7	10		1	6	3
+	8	10		1	7	2
+	R7	10		3	4	3
+	X4	10		3	7	0
+	X6	10		5	5	0
+	N0	10		0	1	0
 	
-	B10	3		0	2	1	66%, sin pifia
-	B11	3		1	1	1	66%, con posible pifia
-	B21	3		1	0	2	33%, con posible pifia
-	B31	3		0	3	0	100%, sin pifia
-	B32	3		1	2	0	100%, con posible pifia
 	
 */
-var dicePrefix = '00GENERIC';
+var dicePrefix = '002BEEL';
 var actions = new Array();
 //cantidad de dados
 /*
