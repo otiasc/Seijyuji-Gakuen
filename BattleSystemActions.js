@@ -17,7 +17,7 @@
 	
 	
 */
-var dicePrefix = '002BEEL';
+var dicePrefix = '02BEEL';
 var actions = new Array();
 //cantidad de dados
 /*
