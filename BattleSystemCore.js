@@ -208,7 +208,7 @@ function calculate() {
 	alertString += conditionsString + '\n';
 	alertString += '\nDados extra: ' + extraDices + '\n';
 	alertString += conditions2String;
-	
+	alert(alertString);
 	copyString = '\n[hr]';
 	copyString+= actionString;
 	/*
