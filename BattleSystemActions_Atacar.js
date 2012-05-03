@@ -49,14 +49,14 @@ actions.push({uniqueId:'A1', prefix:'X4', equation:'F', name:'Atacar/Cuerpo a cu
 	'-4 o menos: Ataque fallido. Golpeas en mal sitio. [u]Herida grave (lesión) en la mano[/u]'
 )});
 
-actions.push({uniqueId:'A18', prefix:'7', equation:'F', name:'Atacar/Cuerpo a cuerpo/Espachurrar (enemigos pequeños)', bonus:new Array(
+actions.push({uniqueId:'A18', prefix:'R7', equation:'F', name:'Atacar/Cuerpo a cuerpo/Espachurrar (enemigos pequeños)', bonus:new Array(
 	'-1|El enemigo se mueve',
 	'-F/3|El exorcista (tú) tiene herida leve en mano',
 	'-F/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+1 o más: Agarras al enemigo',
 	'0: Fallido.',
-	'-1 o menos: Fallido. El enemigo te hace daño'
+	'-1 o menos: Fallido. Agarras al enemigo pero te hace daño [u]Admin. o moderador eligen las consecuencias[/u]'
 )});
 
 actions.push({uniqueId:'A2', prefix:'6', equation:'F', name:'Atacar/Cuerpo a cuerpo/Patada o pisotón', bonus:new Array(
