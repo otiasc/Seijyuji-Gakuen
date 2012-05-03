@@ -4,12 +4,11 @@
 	
 	INCLUYE
 	Otras
-		Pedir refuerzos
-		Buscar objeto en suelo
-		Recuperar arma
-	Acciones obligatorias
-		Buscar las llaves
-		Levantarse del suelo
+		O1	Pedir refuerzos
+		O2	Buscar objeto en suelo
+		O3	Recuperar arma
+		O4	Buscar las llaves
+		O5	Levantarse del suelo
 
 
 */

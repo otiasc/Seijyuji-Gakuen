@@ -3,22 +3,31 @@
 	ATACAR
 	
 	INCLUYE
-	Cuerpo a cuerpo
-		Puñetazo
-		Patada
-	Arma blanca
-		De una mano (daga, etc.)
-		De dos manos (espada, etc.)
-	Arma cuerpo a cuerpo
-		Contundente (martillo, porra, etc)
-		No contundente (bastón, vara, K’rik)
-	Arma de fuego
-		Automática (ametralladora)
-		Manual (pistola, escopeta)
-	Arma demoniaca
-		Espada demoniaca
-	Etc
-		Lanzar objeto
+	> Cuerpo a cuerpo
+		A1	Puñetazo
+		A18	Espachurrar
+		A2	Patada o pisotón
+		A3	Empujar
+		A13	Cabezazo
+		A14	Agarrar del cuello
+		A15 Codazo o rodillazo
+	> Arma blanca
+		A4	De una mano (daga, etc.)
+		A5	De dos manos (espada, etc.)
+	> Arma cuerpo a cuerpo
+		A6	Contundente (martillo, porra, etc)
+		> No contundente (bastón, vara, K’rik)
+			A7	Golpear
+			A10	Lanzar a distancia
+	> Arma de fuego
+		A8	Automática (ametralladora)
+		A9	Manual (pistola, escopeta)
+	> Arma demoniaca
+		A11	Espada demoniaca
+		A16	Llamas demoniacas
+	> Etc
+		A12	Lanzar objeto
+		A17 Agua Bendita
 
 */
 
@@ -41,6 +50,7 @@ actions.push({uniqueId:'A1', prefix:'X4', equation:'F', name:'Atacar/Cuerpo a cu
 )});
 
 actions.push({uniqueId:'A18', prefix:'7', equation:'F', name:'Atacar/Cuerpo a cuerpo/Espachurrar (enemigos pequeños)', bonus:new Array(
+	'-1|El enemigo se mueve',
 	'-F/3|El exorcista (tú) tiene herida leve en mano',
 	'-F/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(

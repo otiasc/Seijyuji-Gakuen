@@ -3,13 +3,18 @@
 	HABILIDADES
 	
 	INCLUYE
-	Aria
-		Versos fatales
-	Doctor
-		Curar herida espiritual
-	Tamer
-		Invocación de familiar
-		Ataque de familiar
+	> Aria
+		> Versos fatales
+			H1	Corto
+			H2	Medio
+			H3	Largo
+	> Doctor
+		H4 Curar
+	> Tamer
+		H5	Invocación de familiar
+		H6	Ataque de familiar
+		H7	Curación
+		H8	Recuperar control de familiar
 
 */
 

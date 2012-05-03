@@ -3,12 +3,15 @@
 	DEFENSA
 	
 	INCLUYE
-	Defensa propia
-		Alejarse
-	Defender a otro
-		Interponerse
-		Distraer
-		Llamar la atención sobre uno mismo
+	> Defensa propia
+		D1	Alejarse
+		D2	Esquivar al enemigo
+		D3	Defensa ante posesión
+		D4	Soltarte del enemigo
+	> Defender a otro
+		D5	Interponerse
+		D6	Distraer
+		D7	Llamar la atención sobre uno mismo
 
 */
 
