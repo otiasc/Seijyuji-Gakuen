@@ -40,6 +40,15 @@ actions.push({uniqueId:'A1', prefix:'X4', equation:'F', name:'Atacar/Cuerpo a cu
 	'-4 o menos: Ataque fallido. Golpeas en mal sitio. [u]Herida grave (lesión) en la mano[/u]'
 )});
 
+actions.push({uniqueId:'A18', prefix:'7', equation:'F', name:'Atacar/Cuerpo a cuerpo/Espachurrar (enemigos pequeños)', bonus:new Array(
+	'-F/3|El exorcista (tú) tiene herida leve en mano',
+	'-F/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+), results: new Array(
+	'+1 o más: Agarras al enemigo',
+	'0: Fallido.',
+	'-1 o menos: Fallido. El enemigo te hace daño'
+)});
+
 actions.push({uniqueId:'A2', prefix:'6', equation:'F', name:'Atacar/Cuerpo a cuerpo/Patada o pisotón', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
@@ -251,4 +260,17 @@ actions.push({uniqueId:'A12', prefix:'7', equation:'F * PUN + 1', name:'Atacar/E
 	'0: Ataque fallido. El objeto cae cerca del enemigo. Para recuperarlo (si se desea) realizar la acción [u]Otras/Buscar objeto en suelo[/u]',
 	'-1 a -5: Ataque fallido. No se sabe dónde cae el arma. Para recuperarlo (si se desea) realizar la acción [u]Otras/Buscar objeto en suelo[/u]',
 	'-6 o menos: Ataque fallido. Hieres a un compañero. [u]Herida leve[/u]'
+)});
+
+actions.push({uniqueId:'A17', prefix:'6', equation:'4', name:'Atacar/Etc/Agua bendita', bonus:new Array(
+	'+1|El enemigo está quieto',
+	'+1|El enemigo es pequeño y es UNO',
+	'-1|El enemigo está lejos',
+	'-2|El enemigo está muy lejos'
+), results: new Array(
+	'+2 o más: Ataque con éxito. Das solo en la diana',
+	'+1: Ataque con éxito. Dejas rastro entre tu objetivo y tú',
+	'0: Das a tu objetivo y a tu alrededor',
+	'-1: Empapas a un compañero',
+	'-2: Empapas a un compañero y su alrededor'
 )});
