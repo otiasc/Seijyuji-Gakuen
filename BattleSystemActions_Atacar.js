@@ -273,10 +273,12 @@ actions.push({uniqueId:'A12', prefix:'7', equation:'F * PUN + 1', name:'Atacar/E
 )});
 
 actions.push({uniqueId:'A17', prefix:'6', equation:'4', name:'Atacar/Etc/Agua bendita', bonus:new Array(
-	'+1|El enemigo está quieto',
-	'+1|El enemigo es pequeño y es UNO',
-	'-1|El enemigo está lejos',
-	'-2|El enemigo está muy lejos'
+	'+1|El objetivo está quieto',
+	'+1|Necesitas muy poca agua (un vaso)',
+	'-1|Necesitas bastante agua (garrafa)',
+	'-3|Necesitas mucha agua (barril)',
+	'-1|El objetivo está lejos',
+	'-2|El objetivo está muy lejos'
 ), results: new Array(
 	'+2 o más: Ataque con éxito. Das solo en la diana',
 	'+1: Ataque con éxito. Dejas rastro entre tu objetivo y tú',
