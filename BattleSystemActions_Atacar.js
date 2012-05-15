@@ -227,7 +227,7 @@ actions.push({uniqueId:'A9', prefix:'7', equation:'F * PUN -2', name:'Atacar/Arm
 /*
 	CATEGORÍA: Atacar/Arma demoniaca
 */
-actions.push({uniqueId:'A11', prefix:'8', equation:'1+ESG', name:'Atacar/Arma demoniaca/Espada demoniaca', bonus:new Array(
+actions.push({uniqueId:'A11', prefix:'6', equation:'1+ESG', name:'Atacar/Arma demoniaca/Espada demoniaca', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-ESG/3|El exorcista (tú) tiene herida leve en mano',
@@ -240,7 +240,7 @@ actions.push({uniqueId:'A11', prefix:'8', equation:'1+ESG', name:'Atacar/Arma de
 	'-4: Ataque fallido. Hieres al compañero más cercano. [u]Herida muy grave[/u]',
 	'-5: se rompe'
 )});
-actions.push({uniqueId:'A16', prefix:'6', equation:'FD * D', name:'Atacar/Etc/Llamas demoníacas', bonus:new Array(
+actions.push({uniqueId:'A16', prefix:'6', equation:'F * D', name:'Atacar/Etc/Llamas demoníacas', bonus:new Array(
 	'-F*D/4|Escuchas la llamada de Gehena'
 ), results: new Array(
 	'+3 o más: Provocas quemaduras graves en el objetivo. Herida grave',
