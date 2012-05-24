@@ -241,7 +241,8 @@ actions.push({uniqueId:'A11', prefix:'6', equation:'1+ESG', name:'Atacar/Arma de
 	'-5: se rompe'
 )});
 actions.push({uniqueId:'A16', prefix:'6', equation:'F * D', name:'Atacar/Etc/Llamas demoníacas', bonus:new Array(
-	'-F*D/4|Escuchas la llamada de Gehena'
+	'-F*D/4|Llamas involuntarias',
+	'-F*D/2|Una demonio te está forzando a sacarlas'
 ), results: new Array(
 	'+3 o más: Provocas quemaduras graves en el objetivo. Herida grave',
 	'+1 o +2: Fuego en el enemigo. Herida leve',
