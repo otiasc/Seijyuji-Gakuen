@@ -34,10 +34,10 @@ function process() {
 	var Rb, Vb, Fb, Ib, Db;
 	
 	Rb = 0;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
-	Vb = $('#enemyIframe').contents().find('#profile-tab-field-profil #field_id3 .ajax-profil_parent .field_uneditable').text();
-	Fb = $('#enemyIframe').contents().find('#profile-tab-field-profil #field_id1 .ajax-profil_parent .field_uneditable').text();
-	Ib = $('#enemyIframe').contents().find('#profile-tab-field-profil #field_id2 .ajax-profil_parent .field_uneditable').text();
-	Db = $('#enemyIframe').contents().find('#profile-tab-field-profil #field_id4 .ajax-profil_parent .field_uneditable').text();
+	Vb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id3 .ajax-profil_parent .field_uneditable').text());
+	Fb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id1 .ajax-profil_parent .field_uneditable').text());
+	Ib = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id2 .ajax-profil_parent .field_uneditable').text());
+	Db = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id4 .ajax-profil_parent .field_uneditable').text());
 	
 	var FD; // Fuerza demoniaca
 	FD = 0;
