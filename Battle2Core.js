@@ -123,25 +123,6 @@ function executecalculus(base) {
 		if (isNaN(variable)) {
 			var calc = eval(base[i]);
 			points +=calc;
-			
-			if (calc>0) {
-				conditionsString += '+' + calc;
-			} else if (calc<0) {
-				conditionsString += calc;
-			}
-			if (calc!=0) {
-				if (base[i].indexOf('F')!=-1) {conditionsString += ' por fuerza,'}
-				if (base[i].indexOf('V')!=-1) {conditionsString += ' por velocidad,'}
-				if (base[i].indexOf('I')!=-1) {conditionsString += ' por inteligencia,'}
-				if (base[i].indexOf('R')!=-1) {conditionsString += ' por rango (' + ranks[R] + '),'}
-				//
-				if (base[i].indexOf('PUN')!=-1) {conditionsString += ' por puntería,'}
-				if (base[i].indexOf('DOC')!=-1) {conditionsString += ' por medicina,'}
-				if (base[i].indexOf('ESG')!=-1) {conditionsString += ' por habil. con la espada,'}
-				if (base[i].indexOf('FAM')!=-1) {conditionsString += ' por fuerza de familiar,'}
-				conditionsString = conditionsString.slice(0,-1);
-				conditionsString += '\n';
-			}
 		} else {
 			basePoints += variable;
 			points += basePoints;
