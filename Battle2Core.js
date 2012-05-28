@@ -318,7 +318,7 @@ function hide() {
 
 var userArray = new Array();
 $(document).ready(function(e) {
-	toggle();
+	hide();
 	$('#memberlistIframe').load(function(e) {
 		// tabla con la lista
 		var h = $('#memberlistIframe').contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
@@ -335,6 +335,7 @@ $(document).ready(function(e) {
 			$('#contextmenu a').click(function(e) {
 				alert($(this).attr('href'));
             });
+			toggle();
 		});
 	});
 	$('#usersearch').focus(function(e) {
