@@ -49,7 +49,17 @@ function process() {
 	MEMb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id9 .ajax-profil_parent .field_uneditable').text());
 	FAMb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id8 .ajax-profil_parent .field_uneditable').text());
 	
-	alert(V + ':' + Vb)
+	
+	var t = 'V' + V + ':' + Vb + '\n';
+	t    += 'F' + F + ':' + Fb + '\n';
+	t    += 'I' + I + ':' + Ib + '\n';
+	t    += 'D' + D + ':' + Db + '\n';
+	t    += 'PUN' + PUN + ':' + PUNb + '\n';
+	t    += 'DOC' + DOC + ':' + DOCb + '\n';
+	t    += 'ESG' + ESG + ':' + ESGb + '\n';
+	t    += 'MEM' + MEM + ':' + MEMb + '\n';
+	t    += 'FAM' + FAM + ':' + FAMb + '\n';
+	alert(t)
 }
 
 function toggle() {
