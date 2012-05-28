@@ -112,21 +112,7 @@ function loadAction(actionId) {
 }
 
 
-function calculate() {
-	// Cadena a mostrar
-	var copyString = '[hr]';
-	//
-	var actionString = '';
-	var conditionsString = '';
-	var conditions2String = '';
-	var rollString = '';
-	var resultsString = '';
-	
-	// Acción
-	var actionId = $('#actionId').attr('value');
-	var base = actions[actionId].equation.split('+');
-	
-	// Por cada base
+function executecalculus(base) {
 	var i = 0;
 	var points = 0;
 	var basePoints = 0;
@@ -162,6 +148,29 @@ function calculate() {
 		}
 		i++;
 	}
+}
+
+function calculate() {
+	// Cadena a mostrar
+	var copyString = '[hr]';
+	//
+	var actionString = '';
+	var conditionsString = '';
+	var conditions2String = '';
+	var rollString = '';
+	var resultsString = '';
+	
+	// Acción
+	var actionId = $('#actionId').attr('value');
+	var base1 = actions[actionId].equation.split('+');
+	var base2 = actions[actionId].equation2.split('+');
+	
+	var p1 = executecalculus(base1);
+	var p2 = executecalculus(base2);
+	alert(p1 + ":" + p2)
+	
+	// Por cada base
+	
 	actionString = 'Acción: ' + actions[actionId].name + ' ( ' + actions[actionId].uniqueId + ' )';
 	
 	// Parámetros
@@ -332,13 +341,11 @@ $(document).ready(function(e) {
 				li:li
 			});
 			
-			$('#contextmenu a').click(function(e) {
-				alert($(this).attr('href'));
-            });
 			toggle();
 		});
 	});
 	$('#usersearch').focus(function(e) {
+		$('#usersearch').attr('valie', '');
 		toggle();
 	});
 	$('#usersearch').keyup(function(e) {
