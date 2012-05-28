@@ -37,7 +37,7 @@
 */
 
 //  DADO 01
-actions.push({uniqueId:'A1', prefix:'X4', equation:'F', equation2:'F2', name:'Atacar/Cuerpo a cuerpo/Puñetazo', bonus:new Array(
+actions.push({uniqueId:'A1', prefix:'X4', equation:'F', equation2:'Fb', name:'Atacar/Cuerpo a cuerpo/Puñetazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
 	'-F/3|El exorcista (tú) tiene herida leve en mano',
