@@ -35,9 +35,9 @@ function process() {
 	
 	Rb = 0;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
 	Vb = parseInt($('#enemyIframe').contents().find('#field_id3 .field_uneditable').html());
-	Fb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id1 .ajax-profil_parent .field_uneditable').text());
-	Ib = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id2 .ajax-profil_parent .field_uneditable').text());
-	Db = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id4 .ajax-profil_parent .field_uneditable').text());
+	Fb = parseInt($('#enemyIframe').contents().find('#field_id1 .field_uneditable').html());
+	Ib = parseInt($('#enemyIframe').contents().find('#field_id2 .field_uneditable').html());
+	Db = parseInt($('#enemyIframe').contents().find('#field_id4 .field_uneditable').html());
 	
 	var FD; // Fuerza demoniaca
 	FD = 0;
