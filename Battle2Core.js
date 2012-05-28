@@ -247,8 +247,13 @@ function userSelect(i, h) {
     });
 }
 
+var R, V, F, I, D;
+var PUN, DOC, ESG, MEM, FAM
+
+var Rb, Vb, Fb, Ib, Db;
+var PUNb, DOCb, ESGb, MEMb, FAMb;
+
 function process() {
-	var R, V, F, I, D;
 	
 	R = 0;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
 	V = parseInt($('#profileIframe').contents().find('#profile_field_10_3').attr('value'));
@@ -259,14 +264,13 @@ function process() {
 	var FD; // Fuerza demoniaca
 	FD = 0;
 	
-	var PUN, DOC, ESG, MEM, FAM
 	PUN = parseInt($('#profileIframe').contents().find('#profile_field_10_5').attr('value'));
 	DOC = parseInt($('#profileIframe').contents().find('#profile_field_10_7').attr('value'));
 	ESG = parseInt($('#profileIframe').contents().find('#profile_field_10_6').attr('value'));
 	MEM = parseInt($('#profileIframe').contents().find('#profile_field_10_9').attr('value'));
 	FAM = parseInt($('#profileIframe').contents().find('#profile_field_10_8').attr('value'));
 	
-	var Rb, Vb, Fb, Ib, Db;
+
 	
 	Rb = 0;//parseInt($('#iframeContent').contents().find('#profile_field_10_1').attr('value'));
 	Vb = parseInt($('#enemyIframe').contents().find('#field_id3 .field_uneditable').html());
@@ -277,7 +281,6 @@ function process() {
 	var FD; // Fuerza demoniaca
 	FD = 0;
 	
-	var PUNb, DOCb, ESGb, MEMb, FAMb;
 	PUNb = parseInt($('#enemyIframe').contents().find('#field_id5 .field_uneditable').html());
 	DOCb = parseInt($('#enemyIframe').contents().find('#field_id7 .field_uneditable').html());
 	ESGb = parseInt($('#enemyIframe').contents().find('#field_id6 .field_uneditable').html());
