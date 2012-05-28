@@ -318,7 +318,7 @@ function hide() {
 
 var userArray = new Array();
 $(document).ready(function(e) {
-	hide();
+	toggle();
 	$('#memberlistIframe').load(function(e) {
 		// tabla con la lista
 		var h = $('#memberlistIframe').contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
