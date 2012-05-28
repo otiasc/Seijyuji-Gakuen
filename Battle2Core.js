@@ -355,7 +355,9 @@ function hide() {
 
 var userArray = new Array();
 $(document).ready(function(e) {
-	hide();
+	$('#navBar').addClass('disabled');
+	$('#actionList').addClass('disabled');
+	
 	$('#memberlistIframe').load(function(e) {
 		// tabla con la lista
 		var h = $('#memberlistIframe').contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
@@ -371,8 +373,7 @@ $(document).ready(function(e) {
 			
 			hide();
 		});
-		$('#navBar').addClass('disabled');
-		$('#actionList').addClass('disabled');
+
 	});
 	$('#usersearch').focus(function(e) {
 		$('#usersearch').attr('valie', '');
