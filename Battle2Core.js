@@ -261,6 +261,9 @@ function calculate() {
 
 */
 function userSelect(i, h) {
+	$('#navBar').removeClass('disabled');
+	$('#actionList').removeClass('disabled');
+	
 	$('#usersearch').attr('value', i);
 	$('#enemyIframe').attr('src', h);
 	hide();
@@ -366,8 +369,10 @@ $(document).ready(function(e) {
 				li:li
 			});
 			
-			toggle();
+			hide();
 		});
+		$('#navBar').addClass('disabled');
+		$('#actionList').addClass('disabled');
 	});
 	$('#usersearch').focus(function(e) {
 		$('#usersearch').attr('valie', '');
