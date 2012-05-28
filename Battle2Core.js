@@ -5,7 +5,7 @@
 */
 function userSelect(i, h) {
 	$('#usersearch').attr('value', i);
-	$('#enemyIframe').attr('src', '/enemy.html');
+	$('#enemyIframe').attr('src', h);
 	hide();
 	$('#enemyIframe').load(function(e) {
         process();
