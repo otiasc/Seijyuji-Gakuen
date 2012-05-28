@@ -21,7 +21,7 @@ actions.push({uniqueId:'O1', prefix:'N0', equation:'1', equation2:'1', name:'Otr
 	'+1: Conseguido',
 	'0: No conseguido'
 )});
-actions.push({uniqueId:'O2', prefix:'X2', equation:'1', equation2:'1', name:'Otras/Buscar objeto en suelo', bonus:new Array(
+actions.push({uniqueId:'O2', prefix:'X2', equation:'1+I', equation2:'1', name:'Otras/Buscar objeto en suelo', bonus:new Array(
 	'+1|Objeto grande',
 	'+1|Objeto brillante',
 	'-1|Objeto pequeño',
@@ -32,18 +32,18 @@ actions.push({uniqueId:'O2', prefix:'X2', equation:'1', equation2:'1', name:'Otr
 	'+1 o más: recuperado',
 	'0 o menos: no recuperado'
 )});
-actions.push({uniqueId:'O3', prefix:'X6', equation:'1', equation2:'1', name:'Otras/Recuperar arma', bonus:new Array(
+actions.push({uniqueId:'O3', prefix:'X6', equation:'2+I', equation2:'1', name:'Otras/Recuperar arma', bonus:new Array(
 ), results: new Array(
 	'+1: recuperado',
 	'0: no recuperado'
 )});
-actions.push({uniqueId:'O4', prefix:'X6', equation:'4', equation2:'1', name:'Otras/Buscar las llaves', bonus:new Array(
+actions.push({uniqueId:'O4', prefix:'X6', equation:'2+I', equation2:'1', name:'Otras/Buscar las llaves', bonus:new Array(
 	'-1|Es de noche'
 ), results: new Array(
 	'+1 o más: Encontradas',
 	'0 o menos: No encontradas'
 )});
-actions.push({uniqueId:'O5', prefix:'X4', equation:'F', equation2:'1', name:'Otras/Levantarse del suelo', bonus:new Array(
+actions.push({uniqueId:'O5', prefix:'X4', equation:'F+1', equation2:'1', name:'Otras/Levantarse del suelo', bonus:new Array(
 	'-F*1/3|Tiene heridas graves',
 	'-F*2/3|Tiene heridas muy graves'
 ), results: new Array(
