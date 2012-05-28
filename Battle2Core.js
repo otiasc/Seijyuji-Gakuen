@@ -119,7 +119,7 @@ function executecalculus(base) {
 	
 	while (i<base.length) {
 		// Razón
-		var variable = parseInt(base[i]);
+		var variable = base[i];
 		if (isNaN(variable)) {
 			var calc = eval(base[i]);
 			points +=calc;
@@ -147,9 +147,11 @@ function calculate() {
 	var base1 = actions[actionId].equation.split('+');
 	var base2 = actions[actionId].equation2.split('+');
 	
-	var p1 = executecalculus(base1);
+	var p1 = parseInt(executecalculus(base1));
 	var p2 = executecalculus(base2);
-	alert(p1 + ":" + p2)
+	
+	alert('Dados ' + p1 + ". Dificultad " + p2);
+	
 	
 	// Por cada base
 	
@@ -183,8 +185,58 @@ function calculate() {
 	copyString+= '[/spoiler]';
 	copyString+='';
 	*/
+	/*
+		TABLA DE EQUIVALENCIAS
+		______________________
+	P2			+1	0	-1	nombre
+	6.0-		1	0	0	10
+	5.0-6.0		9	0	1	9
 	
-	copyString+='[roll=\"' + dicePrefix + actions[actionId].prefix + '\"]' + points + '[/roll]';
+	4.0-5.0		8	2	1	8
+	3.0-4.0		7	2	1	7
+	
+	2.0-3.0		6	3	1	6
+	1.0-2.0		5	4	1	5	
+	
+	0.9-1.0		4	4	2	4
+	0.8-0.9		4	2	4	4X
+	
+	0.7-0.8		3	4	3	3
+	0.6-0.7		3	2	5	3X
+	
+	0.5-0.6		2	4	4	2
+	0.4-0.5		2	2	6	2X
+	
+	0.3-0.4		1	4	5	1
+	0.2-0.3		1	2	7	1X
+	
+	0.1-0.2		0	4	6	0
+	-0.1		0	0	1	0X
+	
+	*/
+	
+	if (p2>=6) {diceSecondName = '10'}
+	if (p2>=5 && p2<6) {diceSecondName = '9'}
+	if (p2>=4 && p2<5) {diceSecondName = '8'}
+	if (p2>=3 && p2<4) {diceSecondName = '7'}
+	if (p2>=2 && p2<3) {diceSecondName = '6'}
+	if (p2>=1 && p2<2) {diceSecondName = '5'}
+	
+	if (p2>=0.9 && p2<1) {diceSecondName = '4'}
+	if (p2>=0.8 && p2<0.9) {diceSecondName = '4X'}
+	if (p2>=0.7 && p2<0.8) {diceSecondName = '3'}
+	if (p2>=0.6 && p2<0.7) {diceSecondName = '3X'}
+	if (p2>=0.5 && p2<0.6) {diceSecondName = '2'}
+	if (p2>=0.4 && p2<0.5) {diceSecondName = '2X'}
+	if (p2>=0.3 && p2<0.4) {diceSecondName = '1'}
+	if (p2>=0.2 && p2<0.3) {diceSecondName = '1X'}
+	if (p2>=0.1 && p2<0.2) {diceSecondName = '0'}
+	if (p2<0.1) {diceSecondName = '0X'}
+	
+	var diceName = dicePrefix + diceSecondName;
+	
+	
+	copyString+='[roll=\"' + diceName + '\"]' + p1 + '[/roll]';
 	
 	var extraDiceName
 	if (extraDices<0) {extraDiceName='Penalización'} else {extraDiceName='Bonificación'}
