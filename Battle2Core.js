@@ -129,6 +129,7 @@ function executecalculus(base) {
 		}
 		i++;
 	}
+	return points;
 }
 
 function calculate() {
