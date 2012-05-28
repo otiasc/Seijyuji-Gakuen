@@ -25,11 +25,11 @@ function process() {
 	FD = 0;
 	
 	var PUN, DOC, ESG, MEM, FAM
-	PUN = parseInt($('#iframeContent').contents().find('#profile_field_10_5').attr('value'));
-	DOC = parseInt($('#iframeContent').contents().find('#profile_field_10_7').attr('value'));
-	ESG = parseInt($('#iframeContent').contents().find('#profile_field_10_6').attr('value'));
-	MEM = parseInt($('#iframeContent').contents().find('#profile_field_10_9').attr('value'));
-	FAM = parseInt($('#iframeContent').contents().find('#profile_field_10_8').attr('value'));
+	PUN = parseInt($('#profileIframe').contents().find('#profile_field_10_5').attr('value'));
+	DOC = parseInt($('#profileIframe').contents().find('#profile_field_10_7').attr('value'));
+	ESG = parseInt($('#profileIframe').contents().find('#profile_field_10_6').attr('value'));
+	MEM = parseInt($('#profileIframe').contents().find('#profile_field_10_9').attr('value'));
+	FAM = parseInt($('#profileIframe').contents().find('#profile_field_10_8').attr('value'));
 	
 	var Rb, Vb, Fb, Ib, Db;
 	
