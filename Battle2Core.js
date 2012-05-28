@@ -216,23 +216,23 @@ function calculate() {
 	
 	*/
 	
-	if (p2>=6) {diceSecondName = '10'}
-	if (p2>=5 && p2<6) {diceSecondName = '9'}
-	if (p2>=4 && p2<5) {diceSecondName = '8'}
-	if (p2>=3 && p2<4) {diceSecondName = '7'}
-	if (p2>=2 && p2<3) {diceSecondName = '6'}
-	if (p2>=1 && p2<2) {diceSecondName = '5'}
+	if (p2>=5.5) {diceSecondName = '10'}
+	if (p2>=4 && p2<5.5) {diceSecondName = '9'}
+	if (p2>=3 && p2<4) {diceSecondName = '8'}
+	if (p2>=2 && p2<3) {diceSecondName = '7'}
+	if (p2>=1.5 && p2<2) {diceSecondName = '6'}
+	if (p2>=1 && p2<1.5) {diceSecondName = '5'}
 	
-	if (p2>=0.9 && p2<1) {diceSecondName = '4'}
-	if (p2>=0.8 && p2<0.9) {diceSecondName = '4X'}
-	if (p2>=0.7 && p2<0.8) {diceSecondName = '3'}
-	if (p2>=0.6 && p2<0.7) {diceSecondName = '3X'}
-	if (p2>=0.5 && p2<0.6) {diceSecondName = '2'}
-	if (p2>=0.4 && p2<0.5) {diceSecondName = '2X'}
-	if (p2>=0.3 && p2<0.4) {diceSecondName = '1'}
-	if (p2>=0.2 && p2<0.3) {diceSecondName = '1X'}
-	if (p2>=0.1 && p2<0.2) {diceSecondName = '0'}
-	if (p2<0.1) {diceSecondName = '0X'}
+	if (p2>=0.80 && p2<1) {diceSecondName = '4'}
+	if (p2>=0.60 && p2<0.80) {diceSecondName = '4X'}
+	if (p2>=0.40 && p2<0.60) {diceSecondName = '3'}
+	if (p2>=0.30 && p2<0.40) {diceSecondName = '3X'}
+	if (p2>=0.20 && p2<0.30) {diceSecondName = '2'}
+	if (p2>=0.17 && p2<0.20) {diceSecondName = '2X'}
+	if (p2>=0.15 && p2<0.17) {diceSecondName = '1'}
+	if (p2>=0.13 && p2<0.15) {diceSecondName = '1X'}
+	if (p2>=0.11 && p2<0.13) {diceSecondName = '0'}
+	if (p2<0.11) {diceSecondName = '0X'}
 	
 	var diceName = dicePrefix + diceSecondName;
 	
