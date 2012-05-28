@@ -213,6 +213,7 @@ function calculate() {
 	0.1-0.2		0	4	6	0
 	-0.1		0	0	1	0X
 	
+	
 	*/
 	
 	if (p2>=6) {diceSecondName = '10'}
