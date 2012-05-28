@@ -24,7 +24,7 @@ function process() {
 	var FD; // Fuerza demoniaca
 	FD = 0;
 	
-	var PUN, DOC, ESG, FAM
+	var PUN, DOC, ESG, MEM, FAM
 	PUN = parseInt($('#iframeContent').contents().find('#profile_field_10_5').attr('value'));
 	DOC = parseInt($('#iframeContent').contents().find('#profile_field_10_7').attr('value'));
 	ESG = parseInt($('#iframeContent').contents().find('#profile_field_10_6').attr('value'));
@@ -42,12 +42,12 @@ function process() {
 	var FD; // Fuerza demoniaca
 	FD = 0;
 	
-	var PUNb, DOCb, ESGb, FAMb;
-	PUNb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id5 .ajax-profil_parent .field_uneditable').text());
-	DOCb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id7 .ajax-profil_parent .field_uneditable').text());
-	ESGb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id6 .ajax-profil_parent .field_uneditable').text());
-	MEMb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id9 .ajax-profil_parent .field_uneditable').text());
-	FAMb = parseInt($('#enemyIframe').contents().find('#profile-tab-field-profil #field_id8 .ajax-profil_parent .field_uneditable').text());
+	var PUNb, DOCb, ESGb, MEMb, FAMb;
+	PUNb = parseInt($('#enemyIframe').contents().find('#field_id5 .field_uneditable').html());
+	DOCb = parseInt($('#enemyIframe').contents().find('#field_id7 .field_uneditable').html());
+	ESGb = parseInt($('#enemyIframe').contents().find('#field_id6 .field_uneditable').html());
+	MEMb = parseInt($('#enemyIframe').contents().find('#field_id9 .field_uneditable').html());
+	FAMb = parseInt($('#enemyIframe').contents().find('#field_id8 .field_uneditable').html());
 	
 	
 	var t = 'V' + V + ':' + Vb + '\n';
