@@ -171,19 +171,6 @@ function calculate() {
     });
 	
 	// Resultado
-	if (param[0]*base[0]>0) {conditionsString+= '+' + (param[0]*base[0]) + ' por ' + attr[0] + ':' + ranks[param[0]] + '\n'};
-	if (param[1]*base[1]>0) {conditionsString+= '+' + (param[1]*base[1]) + ' por ' + attr[1] + '\n'};
-	if (param[2]*base[2]>0) {conditionsString+= '+' + (param[2]*base[2]) + ' por ' + attr[2] + '\n'};
-	if (param[3]*base[3]>0) {conditionsString+= '+' + (param[3]*base[3]) + ' por ' + attr[3] + '\n'};
-	
-	var alertString = '';
-	
-	alertString += actionString + '\n';
-	alertString += 'Base: ' + basePoints + '\n';
-	alertString += conditionsString + '\n';
-	alertString += '\nDados extra: ' + extraDices + '\n';
-	alertString += conditions2String;
-	//alert(alertString);
 	copyString = '\n[hr]';
 	copyString+= actionString;
 	/*
