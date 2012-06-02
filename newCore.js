@@ -139,6 +139,11 @@ function loadActionsMenu(page) {
 	//
 	// Comprobar una a una, cuál tiene coincidencia con page
 	//
+	
+	//
+	// previous. Variable usada para que cada acción solo aparezca UNA VEZ y no cuatromil
+	//
+	var previous = '';
 	for (var i=0; i<actions.length; i++) {
 		var action = actions[i];
 		//
@@ -177,13 +182,12 @@ function loadActionsMenu(page) {
 		// Si la coincidencia no es exacta
 		// Cargar la página con las acciones hijas
 		//
-		} else if (action.name.indexOf(page) == 0) {
+		} else if (action.name.indexOf(page)) {
 			//
 			// Tiene coincidencia.
 			// Obtener texto (hasta la siguiente '/')
 			//
-			var text = actions[i].name.slice(page);
-			if (text.indexOf('/')!=-1) {text = text.slice(0, text.indexOf('/'))}
+			var text = actions[i].name.split('/')[0];
 			//
 			// Crear el elemento li
 			//
