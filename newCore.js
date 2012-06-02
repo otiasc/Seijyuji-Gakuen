@@ -212,3 +212,7 @@ function loadActionsMenu(page) {
 function chooseOponent() {
 	
 }
+
+$(document).ready(function(e) {
+	start();
+});
