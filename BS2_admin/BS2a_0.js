@@ -6,7 +6,7 @@
 	
 */
 var dicePrefix = 'GENERIC';
-var actions = new Array();
+var actionsA = new Array();
 //cantidad de dados
 /*
 	Cómo hacer una ecuación
