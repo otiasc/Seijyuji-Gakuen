@@ -182,8 +182,8 @@ function loadActionsMenu(page) {
 			// Tiene coincidencia.
 			// Obtener texto (hasta la siguiente '/')
 			//
-			var text = actions[i].name.slice(currentPage.length);
-			if (text.indexOf('/')!=-1) {text = text.slice(0, t.indexOf('/'))}
+			var text = actions[i].name.slice(page);
+			if (text.indexOf('/')!=-1) {text = text.slice(0, text.indexOf('/'))}
 			//
 			// Crear el elemento li
 			//
