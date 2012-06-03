@@ -391,7 +391,7 @@ function calculate() {
 	//
 	// CADENA A COPIAR EN EL POST
 	//
-	var actionString = '';
+	var actionString = '\n[hr]';
 	actionString += 'Acción: ' + chosenAction.name + ' ( ' + chosenAction.uniqueId + ' )\n';
 	actionString += '[roll=\"' + diceName + '\"]' + diceAmount + '[/roll]';
 	if (extraDices!=0) {
