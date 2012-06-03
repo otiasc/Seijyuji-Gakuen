@@ -140,7 +140,11 @@ function start() {
 		//
 		var text = $('#actionSearch').attr('value');
 		
-		
+		if (text.length>0) {
+			loadActionsMenu('*' + text);
+		} else {
+			loadActionsMenu('');
+		}
     });
 }
 /*
@@ -157,7 +161,6 @@ function start() {
 function loadActionsMenu(page) {
 	var sea = false;
 	if (page.indexOf('*')==0) {
-		page = page.slice(1)
 		sea = true;
 	}
 	$('#result').addClass('disabled');
@@ -232,7 +235,7 @@ function loadActionsMenu(page) {
 		// Si la coincidencia no es exacta
 		// Cargar la página con las acciones hijas
 		//
-		} else if (action.name.indexOf(page)==0 || (sea && action.name.indexOf(page)!=-1) ) {
+		} else if (action.name.indexOf(page)==0) {
 			//
 			// Tiene coincidencia.
 			// Obtener texto (hasta la siguiente '/')
@@ -254,6 +257,20 @@ function loadActionsMenu(page) {
 				//
 				newLi.appendTo('#actionList');
 			}
+		} else if  (sea && action.name.toLowerCase().indexOf(page.slice(1).toLowerCase())!=-1) {
+			//
+			// Crear el elemento li
+			//
+			var newLi = $('<li></li>');
+			var newA = $('<a />', {
+				href: 'javascript:void(0)',
+				text: action.name,
+				onclick: 'loadActionsMenu(\"' + action.name + '/'+ '\")'
+			}).appendTo(newLi);
+			//
+			// Poner en la lista
+			//
+				newLi.appendTo('#actionList');
 		}
 	}
 	//
@@ -298,8 +315,8 @@ function selectTarget(userName, userLink) {
 	$('#navBar').removeClass('disabled');
 	$('#actionList').removeClass('disabled');
 	
-	$('#usersearch').attr('value', i);
-	$('#enemyIframe').attr('src', h);
+	$('#usersearch').attr('value', userName);
+	$('#enemyIframe').attr('src', userLink);
 	
 	$('#enemyIframe').load(function(e) {
         loadEnemyData();
