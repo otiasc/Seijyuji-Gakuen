@@ -134,6 +134,14 @@ function start() {
 	$('#memberlistIframe').load(function(e) {
 		loadTargetList();
 	});
+	$('#actionSearch').keyup(function(e) {
+		//
+		//
+		//
+		var text = $('#actionSearch').attr('value');
+		
+		
+    });
 }
 /*
 
@@ -142,10 +150,16 @@ function start() {
 		str page	página a cargar (en blanco para cargar el inicio). Ejemplos
 					'Atacar'
 					'Atacar/Cuerpo a Cuerpo'
+		str search	*Atacar
 
 */
 
 function loadActionsMenu(page) {
+	var sea = false;
+	if (page.indexOf('*')==0) {
+		page = page.slice(1)
+		sea = true;
+	}
 	$('#result').addClass('disabled');
 	//
 	// Vaciar el menú
@@ -218,7 +232,7 @@ function loadActionsMenu(page) {
 		// Si la coincidencia no es exacta
 		// Cargar la página con las acciones hijas
 		//
-		} else if (action.name.indexOf(page)==0) {
+		} else if (action.name.indexOf(page)==0 || (sea && action.name.indexOf(page)!=-1) ) {
 			//
 			// Tiene coincidencia.
 			// Obtener texto (hasta la siguiente '/')
