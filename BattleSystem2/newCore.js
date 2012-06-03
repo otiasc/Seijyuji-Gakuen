@@ -401,7 +401,9 @@ function calculate() {
 	actionString += '[spoiler=Consecuencias de la acción]';
 	actionString += chosenAction.results.join('\n');
 	actionString += '[/spoiler]';
-	alert(actionString);
+	
+	var t = $(parent.document).find('#text_editor_textarea').attr('value');
+	$(parent.document).find('#text_editor_textarea').attr('value', t + actionString);
 }
 
 $(document).ready(function(e) {
