@@ -10,7 +10,7 @@
 
 /*
 	1. VARIABLES GLOBALES NECESARIAS
-	-----------------------------------------------------------------
+	----------------------------------------------------------------
 		1.1. Variables de usuario atacante
 			int aF		Fuerza del atacante
 			int aV		Velocidad del atacante
@@ -53,7 +53,7 @@
 						text	texto de la acción
 		
 	2. FUNCIONES
-	-----------------------------------------------------------------
+	----------------------------------------------------------------
 		Start
 			Inicia el programa
 		
@@ -98,6 +98,14 @@ var chosenAction;
 
 */
 function start() {
+	$('#nonSelectedTarget').removeClass('disabled');
+	$('#selectedTarget').addClass('disabled');
+	
+	$('#targetList').removeClass('disabled');
+	
+	$('#actionSearch').addClass('disabled');
+	$('#navBar').addClass('disabled');
+	$('#actionList').addClass('disabled');
 	//
 	// Introducir un evento load en el iframe de usuario
 	//
@@ -119,7 +127,13 @@ function start() {
 	//
 	// Mostrar el menú de acciones
 	//
-	loadActionsMenu('')
+	loadActionsMenu('');
+	//
+	// Introducir un evento load en el iframe de memberlist
+	//
+	$('#memberlistIframe').load(function(e) {
+		loadTargetList();
+	});
 }
 /*
 
@@ -132,6 +146,7 @@ function start() {
 */
 
 function loadActionsMenu(page) {
+	$('#result').addClass('disabled');
 	//
 	// Vaciar el menú
 	//
@@ -139,6 +154,27 @@ function loadActionsMenu(page) {
 	//
 	// Comprobar una a una, cuál tiene coincidencia con page
 	//
+	
+	//
+	// Crear la lista de navegación
+	//
+	var nav = page.split('/');
+	var diceLevel = '';
+	$('#navBar').html('');
+	var newLi = $('<li></li>')
+		.append(
+			$('<a />', {href: 'javascript:void(0)',	text: 'Inicio', onclick: 'loadActionsMenu(\"\")'})
+		);
+	newLi.appendTo('#navBar');
+	
+	for (var i=0; i<nav.length-1; i++) {
+		diceLevel += nav[i] + '/';
+		var newLi = $('<li></li>')
+			.append(
+				$('<a />', {href: 'javascript:void(0)',	text: nav[i], onclick: 'loadActionsMenu(\"' + diceLevel +  '\")'})
+			);
+		newLi.appendTo('#navBar');
+	}
 	
 	//
 	// previous. Variable usada para que cada acción solo aparezca UNA VEZ y no cuatromil
@@ -151,11 +187,12 @@ function loadActionsMenu(page) {
 		// Cargar la página de la Acción
 		// -Opciones de +/- puntos, etc.
 		//
-		if (action.name == page) {
+		if (action.name == page.slice(0,-1) ) {
+			$('#result').removeClass('disabled');
 			//
 			// Rellenar el formulario
 			//
-			$('#actionId').attr('value', action.id);
+			$('#actionIndex').attr('value', i);
 			
 			//
 			// Extras de bonificación y penalización
@@ -175,32 +212,34 @@ function loadActionsMenu(page) {
 				newLabel.html( newLabel.html() + extraName );
 				newLabel.appendTo(newLi);
 				newLi.appendTo('#plusList');
-				i++;
 			}
 		
 		//
 		// Si la coincidencia no es exacta
 		// Cargar la página con las acciones hijas
 		//
-		} else if (action.name.indexOf(page)) {
+		} else if (action.name.indexOf(page)==0) {
 			//
 			// Tiene coincidencia.
 			// Obtener texto (hasta la siguiente '/')
 			//
-			var text = actions[i].name.split('/')[0];
-			//
-			// Crear el elemento li
-			//
-			var newLi = $('<li></li>');
-			var newA = $('<a />', {
-				href: 'javascript:void(0)',
-				text: text,
-				onclick: 'loadActionsMenu(\"' + page + '/' + text + '\")'
-			}).appendTo(newLi);
-			//
-			// Poner en la lista
-			//
-			newLi.appendTo('#actionList');
+			var text = action.name.slice(page.length).split('/')[0];
+			if (text!=previous) {
+				previous = text;
+				//
+				// Crear el elemento li
+				//
+				var newLi = $('<li></li>');
+				var newA = $('<a />', {
+					href: 'javascript:void(0)',
+					text: text,
+					onclick: 'loadActionsMenu(\"' + page + text + '/'+ '\")'
+				}).appendTo(newLi);
+				//
+				// Poner en la lista
+				//
+				newLi.appendTo('#actionList');
+			}
 		}
 	}
 	//
@@ -211,10 +250,128 @@ function loadActionsMenu(page) {
 
 /*
 	FUNCIÓN
-	ELEGIR OPONENTE
+	CARGAR LOS TARGETS
 */
-function chooseOponent() {
+function loadTargetList() {
+	var h = $('#memberlistIframe').contents().find('#memberlist tbody tr .avatar-mini a').each(function(index, element) {
+		var imgSrc = $(this).children('img').attr('src');
+		var text = $(this).text().slice(1);
+		var id = $(this).attr('href');
+		
+		var dd = $('<dd></dd>')
+			.append(
+				$('<a></a>').attr('href', 'javascript:selectTarget(\"' + text + '\", \"' + id + '\")').text(text)
+			);
+		var dt = $('<dt></dt>').append( $('<img />').attr('src', imgSrc) );
+		
+		$('#targetList').append(dt).append(dd);
+	})
+}
+
+/*
+	FUNCIÓN
+	SELECCIONAR EL TARGET
+*/
+function selectTarget(userName, userLink) {
+	$('#nonSelectedTarget').addClass('disabled');
+	$('#selectedTarget').removeClass('disabled');
 	
+	$('#selectedTarget').html('Objetivo: ' + userName + ' <a href="javascript:void(0)" onclick="start()">(Cambiar)</a>');
+	
+	$('#targetList').addClass('disabled');
+	$('#actionSearch').removeClass('disabled');
+	
+	$('#navBar').removeClass('disabled');
+	$('#actionList').removeClass('disabled');
+	
+	$('#usersearch').attr('value', i);
+	$('#enemyIframe').attr('src', h);
+	
+	$('#enemyIframe').load(function(e) {
+        loadEnemyData();
+    });
+}
+
+/*
+	FUNCIÓN
+	LOADENEMYDATA
+*/
+function loadEnemyData() {
+	dV = parseInt($('#enemyIframe').contents().find('#profile_field_10_3').attr('value'));
+	dF = parseInt($('#enemyIframe').contents().find('#profile_field_10_1').attr('value'));
+	dI = parseInt($('#enemyIframe').contents().find('#profile_field_10_2').attr('value'));
+	dD = parseInt($('#enemyIframe').contents().find('#profile_field_10_4').attr('value'));
+	
+	dPUN = parseInt($('#enemyIframe').contents().find('#profile_field_10_5').attr('value'));
+	dDOC = parseInt($('#enemyIframe').contents().find('#profile_field_10_7').attr('value'));
+	dESG = parseInt($('#enemyIframe').contents().find('#profile_field_10_6').attr('value'));
+	dMEM = parseInt($('#enemyIframe').contents().find('#profile_field_10_9').attr('value'));
+	dFAM = parseInt($('#enemyIframe').contents().find('#profile_field_10_8').attr('value'));	
+}
+
+/*
+	FUNCIÓN
+	CALCULATE
+*/
+function calculate() {
+	//
+	// Parámetros de la acción
+	//
+	var actionIndex = $('#actionIndex').attr('value');
+	var chosenAction = actions[actionIndex];
+	//
+	// Dados normales
+	//
+	var diceAmount = eval(chosenAction.equation1);
+	var diceLevel  = eval(chosenAction.equation2);
+	
+	if (diceLevel>=5.5) {diceSecondName = '10'}
+	if (diceLevel>=4 && diceLevel<5.5) {diceSecondName = '9'}
+	if (diceLevel>=3 && diceLevel<4) {diceSecondName = '8'}
+	if (diceLevel>=2 && diceLevel<3) {diceSecondName = '7'}
+	if (diceLevel>=1.5 && diceLevel<2) {diceSecondName = '6'}
+	if (diceLevel>=1 && diceLevel<1.5) {diceSecondName = '5'}
+	
+	if (diceLevel>=0.80 && diceLevel<1) {diceSecondName = '4'}
+	if (diceLevel>=0.60 && diceLevel<0.80) {diceSecondName = '4X'}
+	if (diceLevel>=0.40 && diceLevel<0.60) {diceSecondName = '3'}
+	if (diceLevel>=0.30 && diceLevel<0.40) {diceSecondName = '3X'}
+	if (diceLevel>=0.20 && diceLevel<0.30) {diceSecondName = '2'}
+	if (diceLevel>=0.17 && diceLevel<0.20) {diceSecondName = '2X'}
+	if (diceLevel>=0.15 && diceLevel<0.17) {diceSecondName = '1'}
+	if (diceLevel>=0.13 && diceLevel<0.15) {diceSecondName = '1X'}
+	if (diceLevel>=0.11 && diceLevel<0.13) {diceSecondName = '0'}
+	if (diceLevel<0.11) {diceSecondName = '0X'}
+	
+	var diceName = dicePrefix + diceSecondName;
+	
+	//
+	// Dados extra
+	//	
+	var extraDices = 0;
+	
+	$('#plusList input[type=checkbox]').each(function(index, element) {
+		if ($(this).attr('checked')) {
+			conditions2String += '-' + $(this).parent('label').text() + ' ( ' + $(this).attr('value') + ' )' + '\n'
+			extraDices += parseInt( eval( $(this).attr('value') ), 10);
+		}
+    });
+	if (extraDices<0) {extraDiceName='Penalización'} else {extraDiceName='Bonificación'}
+	
+	//
+	// CADENA A COPIAR EN EL POST
+	//
+	var actionString = '';
+	actionString += 'Acción: ' + chosenAction.name + ' ( ' + chosenAction.uniqueId + ' )\n';
+	actionString += '[roll=\"' + diceName + '\"]' + p1 + '[/roll]';
+	if (extraDices!=0) {
+		actionString +='[roll=\"' + extraDiceName + '\"]' + Math.abs(extraDices) + '[/roll]';
+	}
+	actionString += '\n';
+	actionString += '[spoiler=Consecuencias de la acción]';
+	actionString += chosenAction.results.join('\n');
+	actionString += '[/spoiler]';
+	alert(actionString);
 }
 
 $(document).ready(function(e) {
