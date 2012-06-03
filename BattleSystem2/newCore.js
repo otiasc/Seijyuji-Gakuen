@@ -394,7 +394,7 @@ function calculate() {
 	//
 	var actionString = '';
 	actionString += 'Acción: ' + chosenAction.name + ' ( ' + chosenAction.uniqueId + ' )\n';
-	actionString += '[roll=\"' + diceName + '\"]' + p1 + '[/roll]';
+	actionString += '[roll=\"' + diceName + '\"]' + diceAmount + '[/roll]';
 	if (extraDices!=0) {
 		actionString +='[roll=\"' + extraDiceName + '\"]' + Math.abs(extraDices) + '[/roll]';
 	}
