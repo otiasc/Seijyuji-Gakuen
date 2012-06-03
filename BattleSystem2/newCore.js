@@ -353,7 +353,7 @@ function calculate() {
 	//
 	// Dados normales
 	//
-	var diceAmount = eval(chosenAction.equation1);
+	var diceAmount = eval(chosenAction.equation);
 	var diceLevel  = eval(chosenAction.equation2);
 	
 	if (diceLevel>=5.5) {diceSecondName = '10'}
