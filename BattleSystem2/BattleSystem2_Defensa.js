@@ -30,7 +30,7 @@ actions.push({uniqueId:'D2', prefix:'7', equation:'aV', equation2:'(aV+2)/dV', n
 	'0: No consigues alejarte lo suficiente',
 	'-1 o menos: Tropiezas y caes al suelo'
 )});
-actions.push({uniqueId:'D3', prefix:'6', equation:'aD', equation2:'aD/dD', name:'Defensa propia/Defensa ante posesión', bonus:new Array(
+actions.push({uniqueId:'D3', prefix:'6', equation:'aD', equation2:'aD/15', name:'Defensa propia/Defensa ante posesión', bonus:new Array(
 ), results: new Array(
 	'+1 o más: Consigues librarte',
 	'0: Te poseee'
