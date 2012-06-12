@@ -383,6 +383,7 @@ function calculate() {
 	
 	$('#plusList input[type=checkbox]').each(function(index, element) {
 		if ($(this).attr('checked')) {
+			alert('text: ' + $(this).attr('value') );
 			extraDices += parseInt( eval( $(this).attr('value') ), 10);
 			alert(extraDices);
 		}
