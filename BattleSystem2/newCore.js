@@ -384,6 +384,7 @@ function calculate() {
 	$('#plusList input[type=checkbox]').each(function(index, element) {
 		if ($(this).attr('checked')) {
 			extraDices += parseInt( eval( $(this).attr('value') ), 10);
+			alert(extraDices);
 		}
     });
 	if (extraDices<0) {extraDiceName='Penalización'} else {extraDiceName='Bonificación'}
@@ -402,6 +403,8 @@ function calculate() {
 	actionString += chosenAction.results.join('\n');
 	actionString += '[/spoiler]';
 	
+	
+	alert(actionString);
 	var t = $(parent.document).find('#text_editor_textarea').attr('value');
 	$(parent.document).find('#text_editor_textarea').attr('value', t + actionString);
 }
