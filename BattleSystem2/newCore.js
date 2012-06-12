@@ -220,6 +220,8 @@ function loadActionsMenu(page) {
 				var extraValue = extras[j].slice(0,extras[j].indexOf('|'));
 				var extraName = extras[j].slice(extras[j].indexOf('|')+1);
 				
+				alert(extraValue);
+				
 				var newLi = $('<li></li>');
 				var newLabel = $('<label />');
 				var newInput = $('<input type="checkbox" value="' + extraValue +'" />', {
