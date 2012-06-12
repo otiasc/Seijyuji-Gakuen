@@ -124,8 +124,8 @@ actions.push({uniqueId:'A15', prefix:'X6', equation:'aF', equation2:'aV/dV', nam
 actions.push({uniqueId:'A4', prefix:'R7', equation:'1+aESG', equation2:'aV/dV', name:'Atacar/Arma blanca/De una mano (daga, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-ESG/3|El exorcista (tú) tiene herida leve en mano',
-	'-ESG/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aESG/3|El exorcista (tú) tiene herida leve en mano',
+	'-aESG/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+1 o más: Ataque con éxito. [u]Herida leve[/u]',
 	'0: Ataque fallido.',
