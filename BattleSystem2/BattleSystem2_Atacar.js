@@ -40,8 +40,8 @@
 actions.push({uniqueId:'A1', prefix:'X4', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Puñetazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/3|El exorcista (tú) tiene herida leve en mano',
-	'-F/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF/3|El exorcista (tú) tiene herida leve en mano',
+	'-aF/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+1 o más: Ataque con éxito. [u]Herida leve[/u]',
 	'0: Ataque fallido.',
@@ -51,8 +51,8 @@ actions.push({uniqueId:'A1', prefix:'X4', equation:'aF', equation2:'aV/dV', name
 
 actions.push({uniqueId:'A18', prefix:'R7', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Espachurrar (enemigos pequeños)', bonus:new Array(
 	'-1|El enemigo se mueve',
-	'-F/3|El exorcista (tú) tiene herida leve en mano',
-	'-F/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF/3|El exorcista (tú) tiene herida leve en mano',
+	'-aF/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+1 o más: Agarras al enemigo',
 	'0: Fallido.',
@@ -62,8 +62,8 @@ actions.push({uniqueId:'A18', prefix:'R7', equation:'aF', equation2:'aV/dV', nam
 actions.push({uniqueId:'A2', prefix:'6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Patada o pisotón', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/3|El exorcista (tú) tiene herida leve en pie',
-	'-F/2|El exorcista (tú) tiene herida grave (lesión) en pie o pierna'
+	'-aF/3|El exorcista (tú) tiene herida leve en pie',
+	'-aF/2|El exorcista (tú) tiene herida grave (lesión) en pie o pierna'
 ), results: new Array(
 	'+1 o más: Ataque con éxito. [u]Herida leve[/u]',
 	'0: Ataque fallido.',
@@ -74,8 +74,8 @@ actions.push({uniqueId:'A2', prefix:'6', equation:'aF', equation2:'aV/dV', name:
 actions.push({uniqueId:'A3', prefix:'X4', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Empujar', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/4|El exorcista (tú) tiene herida leve en mano',
-	'-F/3|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF/4|El exorcista (tú) tiene herida leve en mano',
+	'-aF/3|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+3 o más: Ataque con éxito. Desplazas al enemigo y cae al suelo',
 	'+1 o +2: Ataque con éxito. Desplazas al enemigo',
@@ -86,8 +86,8 @@ actions.push({uniqueId:'A3', prefix:'X4', equation:'aF', equation2:'aV/dV', name
 actions.push({uniqueId:'A13', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Cabezazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/4|El exorcista (tú) tiene herida leve la cabeza',
-	'-F/3|El exorcista (tú) tiene herida grave (lesión) en la cabeza'
+	'-aF/4|El exorcista (tú) tiene herida leve la cabeza',
+	'-aF/3|El exorcista (tú) tiene herida grave (lesión) en la cabeza'
 ), results: new Array(
 	'+3 o más: Ataque con éxito. Herida leve al enemigo',
 	'+1 o +2: Ataque con éxito. Herida leve a ambos jugadores',
@@ -97,8 +97,8 @@ actions.push({uniqueId:'A13', prefix:'X6', equation:'aF', equation2:'aV/dV', nam
 actions.push({uniqueId:'A14', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Agarrar del cuello', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/4|El exorcista (tú) tiene herida leve en la mano',
-	'-F/3|El exorcista (tú) tiene herida grave (lesión) en la mano'
+	'-aF/4|El exorcista (tú) tiene herida leve en la mano',
+	'-aF/3|El exorcista (tú) tiene herida grave (lesión) en la mano'
 ), results: new Array(
 	'+3 o más: Ataque con éxito. Herida leve al enemigo',
 	'+1 o +2: Ataque con éxito. Herida leve a ambos jugadores',
@@ -108,8 +108,8 @@ actions.push({uniqueId:'A14', prefix:'X6', equation:'aF', equation2:'aV/dV', nam
 actions.push({uniqueId:'A15', prefix:'X6', equation:'aF', equation2:'aV/dV', name:'Atacar/Cuerpo a cuerpo/Codazo o rodillazo', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/2|El exorcista (tú) tiene herida leve en el codo o rodilla',
-	'-F*2/3|El exorcista (tú) tiene herida grave (lesión) en el codo o rodilla'
+	'-aF/2|El exorcista (tú) tiene herida leve en el codo o rodilla',
+	'-aF*2/3|El exorcista (tú) tiene herida grave (lesión) en el codo o rodilla'
 ), results: new Array(
 	'+1 o más: Ataque con éxito. Herida leve',
 	'0: Ataque fallido',
@@ -134,12 +134,12 @@ actions.push({uniqueId:'A4', prefix:'R7', equation:'1+aESG', equation2:'aV/dV', 
 	'-6: Ataque fallido. Te hieres a ti mismo en la pierna. [u]Herida grave en pierna[/u]'
 )});
 
-actions.push({uniqueId:'A5', prefix:'R7', equation:'ESG', equation2:'(aV-1)/dV', name:'Atacar/Arma blanca/De dos manos (espada, etc.)', bonus:new Array(
+actions.push({uniqueId:'A5', prefix:'R7', equation:'aESG', equation2:'(aV-1)/dV', name:'Atacar/Arma blanca/De dos manos (espada, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-ESG/3|El exorcista (tú) tiene herida leve en una mano',
-	'-ESG*2/3|El exorcista (tú) tiene herida grave (lesión) en una mano o brazo',
-	'-ESG|El exorcista (tú) tiene heridas en ambas manos o brazos'
+	'-aESG/3|El exorcista (tú) tiene herida leve en una mano',
+	'-aESG*2/3|El exorcista (tú) tiene herida grave (lesión) en una mano o brazo',
+	'-aESG|El exorcista (tú) tiene heridas en ambas manos o brazos'
 ), results: new Array(
 	'+2 o más: Ataque con éxito. [u]Herida grave[/u]',
 	'0 a +1: Ataque fallido.',
@@ -156,8 +156,8 @@ actions.push({uniqueId:'A5', prefix:'R7', equation:'ESG', equation2:'(aV-1)/dV',
 actions.push({uniqueId:'A6', prefix:'7', equation:'aF-3', equation2:'(aV-1)/dV', name:'Atacar/Arma cuerpo a cuerpo/Contundente (martillo, porra, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/3+2|El exorcista (tú) tiene herida leve en mano',
-	'-F/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF/3+2|El exorcista (tú) tiene herida leve en mano',
+	'-aF/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+2 o más: Ataque con éxito. [u]Herida grave en lugar crítico[/u]',
 	'+1: Ataque con éxito. [u]Herida grave[/u]',
@@ -169,8 +169,8 @@ actions.push({uniqueId:'A6', prefix:'7', equation:'aF-3', equation2:'(aV-1)/dV',
 actions.push({uniqueId:'A7', prefix:'8', equation:'aF', equation2:'aV/dV', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Golpear', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F/3|El exorcista (tú) tiene herida leve en mano',
-	'-F*2/3|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF/3|El exorcista (tú) tiene herida leve en mano',
+	'-aF*2/3|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+2 o más: Ataque con éxito. [u]Herida grave en lugar crítico[/u]',
 	'+1: Ataque con éxito. [u]Herida leve[/u]',
@@ -179,10 +179,10 @@ actions.push({uniqueId:'A7', prefix:'8', equation:'aF', equation2:'aV/dV', name:
 	'-3 o menos: Ataque fallido. Hieres al compañero más cercano. [u]Herida leve[/u]'
 )});
 actions.push({uniqueId:'A10', prefix:'8', equation:'aF * aPUN + 1', equation2:'aV*aPUN/dV', name:'Atacar/Arma cuerpo a cuerpo/No contundente (bastón, vara, k\'rik, etc.)/Lanzar a distancia', bonus:new Array(
-	'-F*PUN/4|El enemigo está lejos',
-	'-F*PUN/3|El enemigo está muy lejos',
-	'-F*PUN|El enemigo no se ve',
-	'-F*PUN+1|El enemigo se mueve',
+	'-aF*aPUN/4|El enemigo está lejos',
+	'-aF*aPUN/3|El enemigo está muy lejos',
+	'-aF*aPUN|El enemigo no se ve',
+	'-aF*aPUN+1|El enemigo se mueve',
 	//
 	'-1|El exorcista (tú) tiene herida leve en mano',
 	'-2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
@@ -201,8 +201,8 @@ actions.push({uniqueId:'A10', prefix:'8', equation:'aF * aPUN + 1', equation2:'a
 actions.push({uniqueId:'A8',prefix:'6', equation:'aF * aPUN - 4', equation2:'(aV+1)/dV', name:'Atacar/Arma de fuego/Automática (ametralladora, etc.)',  bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F*PUN/3|El exorcista (tú) tiene herida leve en mano',
-	'-F*PUN/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF*aPUN/3|El exorcista (tú) tiene herida leve en mano',
+	'-aF*aPUN/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+3 o más: Ataque con éxito. [u]Herida grave en varios lugares[/u]',
 	'+1 o +2: Ataque con éxito. [u]Herida leve en varios lugares[/u]',
@@ -213,8 +213,8 @@ actions.push({uniqueId:'A8',prefix:'6', equation:'aF * aPUN - 4', equation2:'(aV
 actions.push({uniqueId:'A9', prefix:'7', equation:'aF * aPUN - 2', equation2:'(aV+1)/dV', name:'Atacar/Arma de fuego/Manual (pistola, escopeta, etc.)', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-F*PUN/3|El exorcista (tú) tiene herida leve en mano',
-	'-F*PUN/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF*aPUN/3|El exorcista (tú) tiene herida leve en mano',
+	'-aF*aPUN/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+5 o más: Ataque con éxito. [u]Herida grave en lugar crítico[/u]',
 	'+1 o +4: Ataque con éxito. [u]Herida grave[/u]',
@@ -230,8 +230,8 @@ actions.push({uniqueId:'A9', prefix:'7', equation:'aF * aPUN - 2', equation2:'(a
 actions.push({uniqueId:'A11', prefix:'6', equation:'1+aESG', equation2:'aV/dV', name:'Atacar/Arma demoniaca/Espada demoniaca', bonus:new Array(
 	'+1|El enemigo no te ve (ataque por sorpresa)',
 	//
-	'-ESG/3|El exorcista (tú) tiene herida leve en mano',
-	'-ESG/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aESG/3|El exorcista (tú) tiene herida leve en mano',
+	'-aESG/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+5 o más: Ataque con éxito. [u]Herida muy grave en lugar crítico[/u]',
 	'+1 o +4: Ataque con éxito. [u]Herida muy grave[/u]',
@@ -241,8 +241,8 @@ actions.push({uniqueId:'A11', prefix:'6', equation:'1+aESG', equation2:'aV/dV', 
 	'-5: se rompe'
 )});
 actions.push({uniqueId:'A16', prefix:'6', equation:'aF * aD', equation2:'1', name:'Atacar/Etc/Llamas demoníacas', bonus:new Array(
-	'-F*D/4|Llamas involuntarias',
-	'-F*D/2|Una demonio te está forzando a sacarlas'
+	'-aF*aD/4|Llamas involuntarias',
+	'-aF*aD/2|Una demonio te está forzando a sacarlas'
 ), results: new Array(
 	'+3 o más: Provocas quemaduras graves en el objetivo. Herida grave',
 	'+1 o +2: Fuego en el enemigo. Herida leve',
@@ -258,13 +258,13 @@ actions.push({uniqueId:'A16', prefix:'6', equation:'aF * aD', equation2:'1', nam
 */
 actions.push({uniqueId:'A12', prefix:'7', equation:'aF * aPUN + 1', equation2:'aV/dV', name:'Atacar/Etc/Lanzar objeto', bonus:new Array(
 	'-2|El objeto pesa mucho',
-	'-F*PUN/4|El enemigo está lejos',
-	'-F*PUN/3|El enemigo está muy lejos',
-	'-F*PUN|El enemigo no se ve',
-	'-F*PUN+1|El enemigo se mueve',
+	'-aF*aPUN/4|El enemigo está lejos',
+	'-aF*aPUN/3|El enemigo está muy lejos',
+	'-aF*aPUN|El enemigo no se ve',
+	'-aF*aPUN+1|El enemigo se mueve',
 	//
-	'-F*PUN/3|El exorcista (tú) tiene herida leve en mano',
-	'-F*PUN/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
+	'-aF*aPUN/3|El exorcista (tú) tiene herida leve en mano',
+	'-aF*aPUN/2|El exorcista (tú) tiene herida grave (lesión) en mano o brazo'
 ), results: new Array(
 	'+3 o más: Ataque con éxito. Das en la diana [u]Herida en lugar crítico (según peso de objeto)[/u]',
 	'+1 o +2: Ataque con éxito. Das con el objeto [u]Herida leve (según peso de objeto)[/u]',

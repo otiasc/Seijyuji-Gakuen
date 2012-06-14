@@ -220,7 +220,7 @@ function loadActionsMenu(page) {
 				var extraValue = extras[j].slice(0,extras[j].indexOf('|'));
 				var extraName = extras[j].slice(extras[j].indexOf('|')+1);
 				
-				alert(extraValue);
+//				alert(extraValue);
 				
 				var newLi = $('<li></li>');
 				var newLabel = $('<label />');
@@ -385,9 +385,9 @@ function calculate() {
 	
 	$('#plusList input[type=checkbox]').each(function(index, element) {
 		if ($(this).attr('checked')) {
-			alert('text: ' + $(this).attr('value') );
+//			alert('text: ' + $(this).attr('value') );
 			extraDices += parseInt( eval( $(this).attr('value') ), 10);
-			alert(extraDices);
+//			alert(extraDices);
 		}
     });
 	if (extraDices<0) {extraDiceName='Penalización'} else {extraDiceName='Bonificación'}
@@ -407,7 +407,7 @@ function calculate() {
 	actionString += '[/spoiler]';
 	
 	
-	alert(actionString);
+//	alert(actionString);
 	var t = $(parent.document).find('#text_editor_textarea').attr('value');
 	$(parent.document).find('#text_editor_textarea').attr('value', t + actionString);
 }

@@ -24,7 +24,7 @@
 actions.push({uniqueId:'H1', prefix:'7', equation:'aI + aMEM', equation2:'1', name:'Aria/Versos fatales/Corto', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
-	'-I/2|Distracciones'
+	'-aI/2|Distracciones'
 ), results: new Array(
 	'Requiere un total de +10 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
 	'Si se saca -1 o menos en una misma tirada se interrumpen los versos fatales',
@@ -34,7 +34,7 @@ actions.push({uniqueId:'H1', prefix:'7', equation:'aI + aMEM', equation2:'1', na
 actions.push({uniqueId:'H2', prefix:'7', equation:'aI + aMEM', equation2:'1', name:'Aria/Versos fatales/Medio', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
-	'-I/2|Distracciones'
+	'-aI/2|Distracciones'
 ), results: new Array(
 	'Requiere un total de +15 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
 	'Si se saca -4 en una tirada se interrumpen los versos fatales y hay que empezar',
@@ -44,7 +44,7 @@ actions.push({uniqueId:'H2', prefix:'7', equation:'aI + aMEM', equation2:'1', na
 actions.push({uniqueId:'H3', prefix:'7', equation:'aI + aMEM', equation2:'1', name:'Aria/Versos fatales/Largo', bonus:new Array(
 	'+1|Sin presión',
 	// Repetir esquema con Atacar/Cuerpo a cuerpo/Patada
-	'-I/2|Distracciones'
+	'-aI/2|Distracciones'
 ), results: new Array(
 	'Requiere un total de +30 para que se lleven a cabo. Son acumulativos. Se pueden realizar entre varias personas',
 	'Si se saca -4 en una tirada se interrumpen los versos fatales',
@@ -55,9 +55,9 @@ actions.push({uniqueId:'H3', prefix:'7', equation:'aI + aMEM', equation2:'1', na
 	CATEGORÍA Doctor
 */
 actions.push({uniqueId:'H4', prefix:'6', equation:'aDOC', equation2:'1', name:'Doctor/Curar', bonus:new Array(
-	'+I|Se quiere curar herida leve',
-	'-DOC/3|Se quiere curar herida grave',
-	'-DOC/2|Se quiere curar herida muy grave'
+	'+aDOC|Se quiere curar herida leve',
+	'-aDOC/3|Se quiere curar herida grave',
+	'-aDOC/2|Se quiere curar herida muy grave'
 ), results: new Array(
 	'+1 o más: Cura la parte dañada',
 	'0: Falla la curación',
@@ -78,8 +78,8 @@ actions.push({uniqueId:'H6', prefix:'7', equation:'aD+aFAM', equation2:'1', name
 	'-1|El exorcista (tú) duda (fuerza de voluntad baja)',
 	//
 	'+1|El objetivo es causar herida leve',
-	'-D/3|El objetivo es causar herida grave',
-	'-D/2|El objetivo es causar herida muy grave'
+	'-aD/3|El objetivo es causar herida grave',
+	'-aD/2|El objetivo es causar herida muy grave'
 ), results: new Array(
 	'+1 o más: Ataque conseguido. [u]Daño dependiendo del ataque[/u]',
 	'0: Ataque fallido',
@@ -89,8 +89,8 @@ actions.push({uniqueId:'H6', prefix:'7', equation:'aD+aFAM', equation2:'1', name
 )});
 actions.push({uniqueId:'H7', prefix:'6', equation:'aD+aFAM*aDOC', equation2:'1', name:'Tamer/Curación', bonus:new Array(
 	'+1|Se quiere curar herida leve',
-	'-FAM*DOC/4|Se quiere curar herida grave',
-	'-FAM*DOC/3|Se quiere curar herida muy grave'
+	'-aFAM*aDOC/4|Se quiere curar herida grave',
+	'-aFAM*aDOC/3|Se quiere curar herida muy grave'
 ), results: new Array(
 	'+3 o más: Habilidad realizada con mucho éxito',
 	'+1 o +2: Habilidad realizada con éxito',

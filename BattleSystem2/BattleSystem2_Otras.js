@@ -44,8 +44,8 @@ actions.push({uniqueId:'O4', prefix:'X6', equation:'2+aI', equation2:'1', name:'
 	'0 o menos: No encontradas'
 )});
 actions.push({uniqueId:'O5', prefix:'X4', equation:'aF+1', equation2:'1', name:'Otras/Levantarse del suelo', bonus:new Array(
-	'-F*1/3|Tiene heridas graves',
-	'-F*2/3|Tiene heridas muy graves'
+	'-aF*1/3|Tiene heridas graves',
+	'-aF*2/3|Tiene heridas muy graves'
 ), results: new Array(
 	'+1 o más: Consiguió levantarse',
 	'0: No consiguió levantarse',
